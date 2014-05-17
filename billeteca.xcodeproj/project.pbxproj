@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC685C8E19282938000272AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC685C8D19282938000272AF /* Foundation.framework */; };
+		FC685C9019282938000272AF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC685C8F19282938000272AF /* CoreGraphics.framework */; };
+		FC685C9219282938000272AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC685C9119282938000272AF /* UIKit.framework */; };
+		FC685C9819282938000272AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC685C9619282938000272AF /* InfoPlist.strings */; };
+		FC685C9A19282938000272AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC685C9919282938000272AF /* main.m */; };
+		FC685C9E19282938000272AF /* billetecaAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC685C9D19282938000272AF /* billetecaAppDelegate.m */; };
+		FC685CA119282938000272AF /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC685C9F19282938000272AF /* Main_iPhone.storyboard */; };
+		FC685CA419282938000272AF /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC685CA219282938000272AF /* Main_iPad.storyboard */; };
+		FC685CA719282938000272AF /* billetecaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC685CA619282938000272AF /* billetecaViewController.m */; };
+		FC685CA919282938000272AF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC685CA819282938000272AF /* Images.xcassets */; };
+		FC685CB019282938000272AF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC685CAF19282938000272AF /* XCTest.framework */; };
+		FC685CB119282938000272AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC685C8D19282938000272AF /* Foundation.framework */; };
+		FC685CB219282938000272AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC685C9119282938000272AF /* UIKit.framework */; };
+		FC685CBA19282938000272AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC685CB819282938000272AF /* InfoPlist.strings */; };
+		FC685CBC19282938000272AF /* billetecaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC685CBB19282938000272AF /* billetecaTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC685CB319282938000272AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC685C8219282938000272AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC685C8919282938000272AF;
+			remoteInfo = billeteca;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FC685C8A19282938000272AF /* billeteca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = billeteca.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC685C8D19282938000272AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FC685C8F19282938000272AF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FC685C9119282938000272AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FC685C9519282938000272AF /* billeteca-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "billeteca-Info.plist"; sourceTree = "<group>"; };
+		FC685C9719282938000272AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FC685C9919282938000272AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FC685C9B19282938000272AF /* billeteca-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "billeteca-Prefix.pch"; sourceTree = "<group>"; };
+		FC685C9C19282938000272AF /* billetecaAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = billetecaAppDelegate.h; sourceTree = "<group>"; };
+		FC685C9D19282938000272AF /* billetecaAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = billetecaAppDelegate.m; sourceTree = "<group>"; };
+		FC685CA019282938000272AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		FC685CA319282938000272AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		FC685CA519282938000272AF /* billetecaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = billetecaViewController.h; sourceTree = "<group>"; };
+		FC685CA619282938000272AF /* billetecaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = billetecaViewController.m; sourceTree = "<group>"; };
+		FC685CA819282938000272AF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FC685CAE19282938000272AF /* billetecaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = billetecaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC685CAF19282938000272AF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FC685CB719282938000272AF /* billetecaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "billetecaTests-Info.plist"; sourceTree = "<group>"; };
+		FC685CB919282938000272AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FC685CBB19282938000272AF /* billetecaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = billetecaTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC685C8719282938000272AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC685C9019282938000272AF /* CoreGraphics.framework in Frameworks */,
+				FC685C9219282938000272AF /* UIKit.framework in Frameworks */,
+				FC685C8E19282938000272AF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC685CAB19282938000272AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC685CB019282938000272AF /* XCTest.framework in Frameworks */,
+				FC685CB219282938000272AF /* UIKit.framework in Frameworks */,
+				FC685CB119282938000272AF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC685C8119282938000272AF = {
+			isa = PBXGroup;
+			children = (
+				FC685C9319282938000272AF /* billeteca */,
+				FC685CB519282938000272AF /* billetecaTests */,
+				FC685C8C19282938000272AF /* Frameworks */,
+				FC685C8B19282938000272AF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FC685C8B19282938000272AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC685C8A19282938000272AF /* billeteca.app */,
+				FC685CAE19282938000272AF /* billetecaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC685C8C19282938000272AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC685C8D19282938000272AF /* Foundation.framework */,
+				FC685C8F19282938000272AF /* CoreGraphics.framework */,
+				FC685C9119282938000272AF /* UIKit.framework */,
+				FC685CAF19282938000272AF /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC685C9319282938000272AF /* billeteca */ = {
+			isa = PBXGroup;
+			children = (
+				FC685C9C19282938000272AF /* billetecaAppDelegate.h */,
+				FC685C9D19282938000272AF /* billetecaAppDelegate.m */,
+				FC685C9F19282938000272AF /* Main_iPhone.storyboard */,
+				FC685CA219282938000272AF /* Main_iPad.storyboard */,
+				FC685CA519282938000272AF /* billetecaViewController.h */,
+				FC685CA619282938000272AF /* billetecaViewController.m */,
+				FC685CA819282938000272AF /* Images.xcassets */,
+				FC685C9419282938000272AF /* Supporting Files */,
+			);
+			path = billeteca;
+			sourceTree = "<group>";
+		};
+		FC685C9419282938000272AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC685C9519282938000272AF /* billeteca-Info.plist */,
+				FC685C9619282938000272AF /* InfoPlist.strings */,
+				FC685C9919282938000272AF /* main.m */,
+				FC685C9B19282938000272AF /* billeteca-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FC685CB519282938000272AF /* billetecaTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC685CBB19282938000272AF /* billetecaTests.m */,
+				FC685CB619282938000272AF /* Supporting Files */,
+			);
+			path = billetecaTests;
+			sourceTree = "<group>";
+		};
+		FC685CB619282938000272AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC685CB719282938000272AF /* billetecaTests-Info.plist */,
+				FC685CB819282938000272AF /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC685C8919282938000272AF /* billeteca */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC685CBF19282938000272AF /* Build configuration list for PBXNativeTarget "billeteca" */;
+			buildPhases = (
+				FC685C8619282938000272AF /* Sources */,
+				FC685C8719282938000272AF /* Frameworks */,
+				FC685C8819282938000272AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = billeteca;
+			productName = billeteca;
+			productReference = FC685C8A19282938000272AF /* billeteca.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FC685CAD19282938000272AF /* billetecaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC685CC219282938000272AF /* Build configuration list for PBXNativeTarget "billetecaTests" */;
+			buildPhases = (
+				FC685CAA19282938000272AF /* Sources */,
+				FC685CAB19282938000272AF /* Frameworks */,
+				FC685CAC19282938000272AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC685CB419282938000272AF /* PBXTargetDependency */,
+			);
+			name = billetecaTests;
+			productName = billetecaTests;
+			productReference = FC685CAE19282938000272AF /* billetecaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC685C8219282938000272AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = billeteca;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = azarateo;
+				TargetAttributes = {
+					FC685CAD19282938000272AF = {
+						TestTargetID = FC685C8919282938000272AF;
+					};
+				};
+			};
+			buildConfigurationList = FC685C8519282938000272AF /* Build configuration list for PBXProject "billeteca" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC685C8119282938000272AF;
+			productRefGroup = FC685C8B19282938000272AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC685C8919282938000272AF /* billeteca */,
+				FC685CAD19282938000272AF /* billetecaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC685C8819282938000272AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC685CA419282938000272AF /* Main_iPad.storyboard in Resources */,
+				FC685CA919282938000272AF /* Images.xcassets in Resources */,
+				FC685CA119282938000272AF /* Main_iPhone.storyboard in Resources */,
+				FC685C9819282938000272AF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC685CAC19282938000272AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC685CBA19282938000272AF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC685C8619282938000272AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC685C9E19282938000272AF /* billetecaAppDelegate.m in Sources */,
+				FC685CA719282938000272AF /* billetecaViewController.m in Sources */,
+				FC685C9A19282938000272AF /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC685CAA19282938000272AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC685CBC19282938000272AF /* billetecaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FC685CB419282938000272AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC685C8919282938000272AF /* billeteca */;
+			targetProxy = FC685CB319282938000272AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FC685C9619282938000272AF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC685C9719282938000272AF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FC685C9F19282938000272AF /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC685CA019282938000272AF /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		FC685CA219282938000272AF /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC685CA319282938000272AF /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		FC685CB819282938000272AF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC685CB919282938000272AF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC685CBD19282938000272AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC685CBE19282938000272AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC685CC019282938000272AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "billeteca/billeteca-Prefix.pch";
+				INFOPLIST_FILE = "billeteca/billeteca-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FC685CC119282938000272AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "billeteca/billeteca-Prefix.pch";
+				INFOPLIST_FILE = "billeteca/billeteca-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FC685CC319282938000272AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/billeteca.app/billeteca";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "billeteca/billeteca-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "billetecaTests/billetecaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FC685CC419282938000272AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/billeteca.app/billeteca";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "billeteca/billeteca-Prefix.pch";
+				INFOPLIST_FILE = "billetecaTests/billetecaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC685C8519282938000272AF /* Build configuration list for PBXProject "billeteca" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC685CBD19282938000272AF /* Debug */,
+				FC685CBE19282938000272AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC685CBF19282938000272AF /* Build configuration list for PBXNativeTarget "billeteca" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC685CC019282938000272AF /* Debug */,
+				FC685CC119282938000272AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FC685CC219282938000272AF /* Build configuration list for PBXNativeTarget "billetecaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC685CC319282938000272AF /* Debug */,
+				FC685CC419282938000272AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC685C8219282938000272AF /* Project object */;
+}
