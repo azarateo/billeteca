@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC066D931928F16200FEC3E8 /* billetecaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC066D921928F16200FEC3E8 /* billetecaTableViewController.m */; };
 		FC685C8E19282938000272AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC685C8D19282938000272AF /* Foundation.framework */; };
 		FC685C9019282938000272AF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC685C8F19282938000272AF /* CoreGraphics.framework */; };
 		FC685C9219282938000272AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC685C9119282938000272AF /* UIKit.framework */; };
@@ -22,6 +23,19 @@
 		FC685CB219282938000272AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC685C9119282938000272AF /* UIKit.framework */; };
 		FC685CBA19282938000272AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC685CB819282938000272AF /* InfoPlist.strings */; };
 		FC685CBC19282938000272AF /* billetecaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC685CBB19282938000272AF /* billetecaTests.m */; };
+		FC685CC619282B37000272AF /* billetekaback.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC685CC519282B37000272AF /* billetekaback.jpg */; };
+		FC685CC919283012000272AF /* billetekalog.png in Resources */ = {isa = PBXBuildFile; fileRef = FC685CC819283012000272AF /* billetekalog.png */; };
+		FCFF277F1930F79E0023897C /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFF277E1930F79E0023897C /* Parse.framework */; };
+		FCFF27811930F7CE0023897C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFF27801930F7CE0023897C /* SystemConfiguration.framework */; };
+		FCFF27831930F7D70023897C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFF27821930F7D70023897C /* StoreKit.framework */; };
+		FCFF27851930F7DF0023897C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFF27841930F7DF0023897C /* Security.framework */; };
+		FCFF27871930F7EA0023897C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFF27861930F7EA0023897C /* QuartzCore.framework */; };
+		FCFF27891930F7F40023897C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFF27881930F7F40023897C /* MobileCoreServices.framework */; };
+		FCFF278B1930F8020023897C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFF278A1930F8020023897C /* libz.dylib */; };
+		FCFF278D1930F8140023897C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFF278C1930F8140023897C /* CoreLocation.framework */; };
+		FCFF278F1930F82A0023897C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFF278E1930F82A0023897C /* CFNetwork.framework */; };
+		FCFF27911930F8370023897C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFF27901930F8370023897C /* AudioToolbox.framework */; };
+		FCFF27931930F8450023897C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFF27921930F8450023897C /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC066D911928F16200FEC3E8 /* billetecaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = billetecaTableViewController.h; sourceTree = "<group>"; };
+		FC066D921928F16200FEC3E8 /* billetecaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = billetecaTableViewController.m; sourceTree = "<group>"; };
 		FC685C8A19282938000272AF /* billeteca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = billeteca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC685C8D19282938000272AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FC685C8F19282938000272AF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,6 +71,19 @@
 		FC685CB719282938000272AF /* billetecaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "billetecaTests-Info.plist"; sourceTree = "<group>"; };
 		FC685CB919282938000272AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FC685CBB19282938000272AF /* billetecaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = billetecaTests.m; sourceTree = "<group>"; };
+		FC685CC519282B37000272AF /* billetekaback.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = billetekaback.jpg; sourceTree = "<group>"; };
+		FC685CC819283012000272AF /* billetekalog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = billetekalog.png; sourceTree = "<group>"; };
+		FCFF277E1930F79E0023897C /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../../Downloads/Parse.framework; sourceTree = "<group>"; };
+		FCFF27801930F7CE0023897C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FCFF27821930F7D70023897C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		FCFF27841930F7DF0023897C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FCFF27861930F7EA0023897C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FCFF27881930F7F40023897C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		FCFF278A1930F8020023897C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		FCFF278C1930F8140023897C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FCFF278E1930F82A0023897C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		FCFF27901930F8370023897C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		FCFF27921930F8450023897C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +91,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCFF27931930F8450023897C /* libsqlite3.dylib in Frameworks */,
+				FCFF27911930F8370023897C /* AudioToolbox.framework in Frameworks */,
+				FCFF278F1930F82A0023897C /* CFNetwork.framework in Frameworks */,
 				FC685C9019282938000272AF /* CoreGraphics.framework in Frameworks */,
+				FCFF278D1930F8140023897C /* CoreLocation.framework in Frameworks */,
+				FCFF278B1930F8020023897C /* libz.dylib in Frameworks */,
+				FCFF27891930F7F40023897C /* MobileCoreServices.framework in Frameworks */,
+				FCFF27871930F7EA0023897C /* QuartzCore.framework in Frameworks */,
+				FCFF27851930F7DF0023897C /* Security.framework in Frameworks */,
+				FCFF27831930F7D70023897C /* StoreKit.framework in Frameworks */,
+				FCFF27811930F7CE0023897C /* SystemConfiguration.framework in Frameworks */,
+				FCFF277F1930F79E0023897C /* Parse.framework in Frameworks */,
 				FC685C9219282938000272AF /* UIKit.framework in Frameworks */,
 				FC685C8E19282938000272AF /* Foundation.framework in Frameworks */,
 			);
@@ -81,6 +121,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC066D8E1928F10300FEC3E8 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				FC685CA619282938000272AF /* billetecaViewController.m */,
+				FC685CA519282938000272AF /* billetecaViewController.h */,
+			);
+			name = home;
+			sourceTree = "<group>";
+		};
+		FC066D8F1928F11100FEC3E8 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				FC685C9D19282938000272AF /* billetecaAppDelegate.m */,
+				FC685C9C19282938000272AF /* billetecaAppDelegate.h */,
+			);
+			name = app;
+			sourceTree = "<group>";
+		};
+		FC066D901928F13500FEC3E8 /* resultsTable */ = {
+			isa = PBXGroup;
+			children = (
+				FC066D911928F16200FEC3E8 /* billetecaTableViewController.h */,
+				FC066D921928F16200FEC3E8 /* billetecaTableViewController.m */,
+			);
+			name = resultsTable;
+			sourceTree = "<group>";
+		};
 		FC685C8119282938000272AF = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +170,17 @@
 		FC685C8C19282938000272AF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FCFF27921930F8450023897C /* libsqlite3.dylib */,
+				FCFF27901930F8370023897C /* AudioToolbox.framework */,
+				FCFF278E1930F82A0023897C /* CFNetwork.framework */,
+				FCFF278C1930F8140023897C /* CoreLocation.framework */,
+				FCFF278A1930F8020023897C /* libz.dylib */,
+				FCFF27881930F7F40023897C /* MobileCoreServices.framework */,
+				FCFF27861930F7EA0023897C /* QuartzCore.framework */,
+				FCFF27841930F7DF0023897C /* Security.framework */,
+				FCFF27821930F7D70023897C /* StoreKit.framework */,
+				FCFF27801930F7CE0023897C /* SystemConfiguration.framework */,
+				FCFF277E1930F79E0023897C /* Parse.framework */,
 				FC685C8D19282938000272AF /* Foundation.framework */,
 				FC685C8F19282938000272AF /* CoreGraphics.framework */,
 				FC685C9119282938000272AF /* UIKit.framework */,
@@ -114,12 +192,12 @@
 		FC685C9319282938000272AF /* billeteca */ = {
 			isa = PBXGroup;
 			children = (
-				FC685C9C19282938000272AF /* billetecaAppDelegate.h */,
-				FC685C9D19282938000272AF /* billetecaAppDelegate.m */,
+				FC066D901928F13500FEC3E8 /* resultsTable */,
+				FC066D8F1928F11100FEC3E8 /* app */,
+				FC066D8E1928F10300FEC3E8 /* home */,
+				FC685CC719282B4F000272AF /* images */,
 				FC685C9F19282938000272AF /* Main_iPhone.storyboard */,
 				FC685CA219282938000272AF /* Main_iPad.storyboard */,
-				FC685CA519282938000272AF /* billetecaViewController.h */,
-				FC685CA619282938000272AF /* billetecaViewController.m */,
 				FC685CA819282938000272AF /* Images.xcassets */,
 				FC685C9419282938000272AF /* Supporting Files */,
 			);
@@ -153,6 +231,15 @@
 				FC685CB819282938000272AF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FC685CC719282B4F000272AF /* images */ = {
+			isa = PBXGroup;
+			children = (
+				FC685CC819283012000272AF /* billetekalog.png */,
+				FC685CC519282B37000272AF /* billetekaback.jpg */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +290,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = azarateo;
 				TargetAttributes = {
+					FC685C8919282938000272AF = {
+						DevelopmentTeam = 7EXK8D8KS4;
+					};
 					FC685CAD19282938000272AF = {
 						TestTargetID = FC685C8919282938000272AF;
 					};
@@ -234,7 +324,9 @@
 			files = (
 				FC685CA419282938000272AF /* Main_iPad.storyboard in Resources */,
 				FC685CA919282938000272AF /* Images.xcassets in Resources */,
+				FC685CC919283012000272AF /* billetekalog.png in Resources */,
 				FC685CA119282938000272AF /* Main_iPhone.storyboard in Resources */,
+				FC685CC619282B37000272AF /* billetekaback.jpg in Resources */,
 				FC685C9819282938000272AF /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC685C9E19282938000272AF /* billetecaAppDelegate.m in Sources */,
+				FC066D931928F16200FEC3E8 /* billetecaTableViewController.m in Sources */,
 				FC685CA719282938000272AF /* billetecaViewController.m in Sources */,
 				FC685C9A19282938000272AF /* main.m in Sources */,
 			);
@@ -330,7 +423,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: com.cool4code.billeteca";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: com.cool4code.billeteca";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -369,7 +463,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: com.cool4code.billeteca";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: com.cool4code.billeteca";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -391,10 +486,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: ALEJANDRO ZARATE ORJ (MKGGUQT885)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ALEJANDRO ZARATE ORJ (MKGGUQT885)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/azarateo/Downloads,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "billeteca/billeteca-Prefix.pch";
 				INFOPLIST_FILE = "billeteca/billeteca-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -404,10 +506,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: ALEJANDRO ZARATE ORJ (MKGGUQT885)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ALEJANDRO ZARATE ORJ (MKGGUQT885)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/azarateo/Downloads,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "billeteca/billeteca-Prefix.pch";
 				INFOPLIST_FILE = "billeteca/billeteca-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -471,6 +580,7 @@
 				FC685CC119282938000272AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC685CC219282938000272AF /* Build configuration list for PBXNativeTarget "billetecaTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +589,7 @@
 				FC685CC419282938000272AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

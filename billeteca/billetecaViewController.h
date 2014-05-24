@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "sqlite3.h"
 
-@interface billetecaViewController : UIViewController
+@interface billetecaViewController : UIViewController<UIPickerViewDataSource,UIPickerViewDelegate>{
 
+     sqlite3 *db;
+     NSMutableArray *objectsDownloaded;
+    
+}
+@property (weak, nonatomic) IBOutlet UIPickerView *denominacion;
 @end

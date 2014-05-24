@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="908-Pu-ezc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Billeteca View Controller - BILLETECA-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="billetecaViewController" sceneMemberID="viewController">
@@ -15,13 +15,266 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="billetekaback.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vcn-sB-erh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="billetekalog.png" translatesAutoresizingMaskIntoConstraints="NO" id="pC4-MH-tea">
+                                <rect key="frame" x="85" y="69" width="151" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Rqr-Ih-Mjy"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Catálogo de billetes de Colombia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocT-71-k6P">
+                                <rect key="frame" x="53" y="174" width="215" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="0jr-5Z-pJZ"/>
+                                    <constraint firstAttribute="height" constant="20" id="gYm-iv-lJJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1923 - Hoy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcm-3H-60L">
+                                <rect key="frame" x="121" y="202" width="78" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="umc-mx-wW9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Año" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rI7-eP-fYK">
+                                <rect key="frame" x="157" y="241" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="SNp-fn-h5T"/>
+                                    <constraint firstAttribute="height" constant="21" id="cbq-lz-197"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Denominación" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xX1-wo-8j0">
+                                <rect key="frame" x="20" y="241" width="95" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kk-Te-YxV">
+                                <rect key="frame" x="258" y="241" width="28" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ToT-Fc-2Ot">
+                                <rect key="frame" x="0.0" y="241" width="320" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="ZN4-HZ-Y2Y"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="Qu4-81-Kvx"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rxa-FK-3EY">
+                                <rect key="frame" x="102" y="518" width="116" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1215686351" green="0.082352943720000002" blue="0.44313728810000003" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116" id="RW7-ld-34C"/>
+                                </constraints>
+                                <state key="normal" title="Buscar Billete">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="lD6-cM-fMT" kind="push" id="hDS-pD-SCV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="rI7-eP-fYK" firstAttribute="centerX" secondItem="Gcm-3H-60L" secondAttribute="centerX" constant="18" id="0hz-x1-lfX"/>
+                            <constraint firstItem="pC4-MH-tea" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="85" id="2sj-o1-gN1"/>
+                            <constraint firstAttribute="bottom" secondItem="vcn-sB-erh" secondAttribute="bottom" id="A9M-YI-hVP"/>
+                            <constraint firstItem="xX1-wo-8j0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="BHS-8u-BE2"/>
+                            <constraint firstItem="pC4-MH-tea" firstAttribute="centerX" secondItem="vcn-sB-erh" secondAttribute="centerX" id="D6b-dp-wVF"/>
+                            <constraint firstItem="rI7-eP-fYK" firstAttribute="baseline" secondItem="3kk-Te-YxV" secondAttribute="baseline" id="GSD-vC-gcl"/>
+                            <constraint firstItem="ToT-Fc-2Ot" firstAttribute="trailing" secondItem="vcn-sB-erh" secondAttribute="trailing" id="HB2-gz-kIo"/>
+                            <constraint firstItem="ocT-71-k6P" firstAttribute="centerX" secondItem="pC4-MH-tea" secondAttribute="centerX" id="Lbw-Bz-I20"/>
+                            <constraint firstItem="rI7-eP-fYK" firstAttribute="top" secondItem="Gcm-3H-60L" secondAttribute="bottom" constant="22" id="RQI-FK-bkn"/>
+                            <constraint firstItem="Gcm-3H-60L" firstAttribute="top" secondItem="ocT-71-k6P" secondAttribute="bottom" constant="8" symbolic="YES" id="RcI-gd-q9l"/>
+                            <constraint firstItem="ocT-71-k6P" firstAttribute="top" secondItem="pC4-MH-tea" secondAttribute="bottom" constant="5" id="V4V-hm-If3"/>
+                            <constraint firstItem="vcn-sB-erh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="YOr-EI-2Xp"/>
+                            <constraint firstItem="ToT-Fc-2Ot" firstAttribute="top" secondItem="xX1-wo-8j0" secondAttribute="top" id="bLg-bN-v1k"/>
+                            <constraint firstAttribute="trailing" secondItem="vcn-sB-erh" secondAttribute="trailing" id="cMb-RN-Uon"/>
+                            <constraint firstItem="xX1-wo-8j0" firstAttribute="baseline" secondItem="rI7-eP-fYK" secondAttribute="baseline" id="dnS-Da-PJw"/>
+                            <constraint firstAttribute="bottom" secondItem="Rxa-FK-3EY" secondAttribute="bottom" constant="20" symbolic="YES" id="eBT-2t-k3T"/>
+                            <constraint firstItem="xX1-wo-8j0" firstAttribute="top" secondItem="rI7-eP-fYK" secondAttribute="top" id="fEe-v9-1C4"/>
+                            <constraint firstItem="ToT-Fc-2Ot" firstAttribute="leading" secondItem="vcn-sB-erh" secondAttribute="leading" id="hns-fa-pdQ"/>
+                            <constraint firstItem="rI7-eP-fYK" firstAttribute="top" secondItem="3kk-Te-YxV" secondAttribute="top" id="kA6-on-0MG"/>
+                            <constraint firstItem="vcn-sB-erh" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="olG-dw-HGz"/>
+                            <constraint firstItem="Rxa-FK-3EY" firstAttribute="centerX" secondItem="Gcm-3H-60L" secondAttribute="centerX" id="pU8-2Z-ner"/>
+                            <constraint firstItem="3kk-Te-YxV" firstAttribute="leading" secondItem="rI7-eP-fYK" secondAttribute="trailing" constant="59" id="u0J-eN-H2h"/>
+                            <constraint firstItem="Gcm-3H-60L" firstAttribute="centerX" secondItem="ocT-71-k6P" secondAttribute="centerX" id="wa9-Pn-hYU"/>
+                            <constraint firstItem="pC4-MH-tea" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="5" id="zPL-lF-fw0"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="BILLETECA" id="MFH-md-5Bb"/>
+                    <connections>
+                        <outlet property="denominacion" destination="ToT-Fc-2Ot" id="B3E-BH-e9o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="661" y="91"/>
+        </scene>
+        <!--Billeteca Table View Controller-->
+        <scene sceneID="grj-8T-6zG">
+            <objects>
+                <tableViewController id="lD6-cM-fMT" customClass="billetecaTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="D35-8d-cmJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.96078437569999997" green="0.82745105029999999" blue="0.30196079609999998" alpha="1" colorSpace="deviceRGB"/>
+                        <label key="tableHeaderView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultado de tu busqueda " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="L6A-jr-iKr">
+                            <rect key="frame" x="0.0" y="64" width="320" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.1215686351" green="0.082352943720000002" blue="0.44313728810000003" alpha="1" colorSpace="deviceRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <sections>
+                            <tableViewSection headerTitle="" id="kZs-em-Wdv" colorLabel="IBBuiltInLabel-Red">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="8Ut-XL-ehQ">
+                                        <rect key="frame" x="0.0" y="85" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Ut-XL-ehQ" id="IrE-PE-KyH">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ERK-gD-zmt" kind="push" id="dIe-yL-dFQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="aKr-Un-tLu">
+                                        <rect key="frame" x="0.0" y="129" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aKr-Un-tLu" id="CYw-ou-mbG">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="lD6-cM-fMT" id="MT1-f9-RNF"/>
+                            <outlet property="delegate" destination="lD6-cM-fMT" id="z2U-uZ-hAx"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="gad-nT-aIX"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ddn-Wz-2h9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1037" y="91"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BJD-C4-NX1">
+            <objects>
+                <viewController id="ERK-gD-zmt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lzc-IN-Bke"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Bz-jm-fiV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fbw-n8-ePU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="billetekaback.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Bnb-1K-oIt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detalle del Billete seleccionado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBy-NX-YgM">
+                                <rect key="frame" x="0.0" y="64" width="320" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1215686351" green="0.078431375319999996" blue="0.40392160420000001" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Denominación:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCa-fc-Bhr">
+                                <rect key="frame" x="20" y="114" width="115" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fecha: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHp-xN-wbM">
+                                <rect key="frame" x="20" y="148" width="57" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descripcion:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soo-DK-PTN">
+                                <rect key="frame" x="20" y="189" width="96" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Serie: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qu3-Vf-ntC">
+                                <rect key="frame" x="20" y="233" width="49" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A continuación los precios de compra y/o venta del billete segun su estado " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="305" translatesAutoresizingMaskIntoConstraints="NO" id="Qg6-uA-Vu8">
+                                <rect key="frame" x="8" y="262" width="305" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8 - 10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SD7-RQ-D1N">
+                                <rect key="frame" x="20" y="324" width="63" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wce-jE-wTk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ov6-cu-PGv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1438" y="91"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3Ka-Mw-5IT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="908-Pu-ezc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BTd-Rq-JUe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Zn4-d6-d9s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JIi-rb-Sr1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="265" y="91"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="billetekaback.jpg" width="1080" height="1920"/>
+        <image name="billetekalog.png" width="806" height="522"/>
+    </resources>
+    <color key="tintColor" red="0.9450981021" green="0.84313732389999996" blue="0.1098039299" alpha="1" colorSpace="deviceRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
