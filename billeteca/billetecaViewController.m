@@ -11,9 +11,9 @@
 
 @interface billetecaViewController ()
 
-@property NSArray *arrayDenomination;
-@property NSArray *arrayYears;
-@property NSArray *arrayMonths;
+@property NSMutableArray *arrayDenomination;
+@property NSMutableArray *arrayYears;
+@property NSMutableArray *arrayMonths;
 
 @end
 
@@ -24,14 +24,25 @@
 
 - (void)viewDidLoad
 {
-    //Registration for push notificacions
+    
+#pragma mark variable initialization
+    arrayDenomination = [[NSMutableArray alloc] init];
+    arrayYears = [[NSMutableArray alloc] init];
+    arrayMonths = [[NSMutableArray alloc] init];
+    
+    
+    #pragma mark parse notification app registration
+    
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
     [currentInstallation addUniqueObject:@"collectionists" forKey:@"channels"];
     [currentInstallation saveInBackground];
     
+    #pragma mark database creation Opening
+    
     NSString *ruta = [[NSString alloc] init];
     NSArray *arregloUbicaciones = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
     ruta = [[arregloUbicaciones objectAtIndex:0] stringByAppendingPathComponent:@"bp.sql"];
+    NSLog(@"Numero de archivos %lu", (unsigned long)[arregloUbicaciones count]);
     
     if(sqlite3_open([ruta UTF8String], &db)){
         sqlite3_close(db);
@@ -40,6 +51,11 @@
     else{
         NSLog(@"Abrió la base de datos");
     }
+    
+    
+    #pragma mark table Create
+    
+    
     
     NSString *consulta = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS billete(objectId varchar(20), denominacion varchar(10), year text(10), month text(10), day text(10), f8_10 varchar(20), f5_7 varchar(20), f1_4 varchar(20), descripcion text);"];
     char *error;
@@ -52,6 +68,9 @@
         NSLog(@"Se creó la tabla");
         
     }
+    
+    #pragma mark download data from Parse
+
     
     PFQuery *query = [PFQuery queryWithClassName:@"billeteca"];
     query.limit = 1000;
@@ -90,23 +109,44 @@
             NSLog(@"Billeteca: Error in query to cloud databases: %@ %@", error, [error userInfo]);
         }
     }];
+    sqlite3_close(db);
+
+
+    #pragma mark retreive data from SQLite DB
     
+    
+    
+   
+
+    sqlite3_stmt *statement;
+    NSString *denominationsQuery = @"select distinct denominacion from billete where denominacion is not null order by denominacion asc";
+    NSString *yearQuery = @"select distinct year from billete where denominacion is not null order by year asc";
+    
+    [self queryDataBaseWithQuery:denominationsQuery withStatement:statement InsertingInArray:arrayDenomination];
+    [self queryDataBaseWithQuery:yearQuery withStatement:statement InsertingInArray:arrayYears];
 
     
+#pragma mark consulta Denominaciones
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    /*if(sqlite3_prepare(db, [denominationsQuery UTF8String], -1, &statement, nil) == SQLITE_OK){
+        while (sqlite3_step(statement) == SQLITE_ROW) {
+            char *denominacionChar = (char *) sqlite3_column_text(statement, 0);
+            //NSString *denominacionString = [[NSString alloc] initWithUTF8String:denominacionChar];
+            
+             NSString *denominacionString = denominacionChar == nil ? @"" : [[NSString alloc] initWithUTF8String:denominacionChar];
+            
+            [arrayDenomination addObject:denominacionString];
+            NSLog(@"Consultando denominaciones");
+
+        }
+       
+    }
+    else{
+        NSLog(@"No se consultó la tabla");
+        
+    }
+    sqlite3_close(db);*/
+
     
     
     
@@ -115,9 +155,9 @@
     //User Interface load
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.arrayDenomination = [[NSArray alloc] initWithObjects:@"1/2",@"1",nil];
-    self.arrayYears = [[NSArray alloc] initWithObjects:@"1923",@"1924",nil];
-    self.arrayMonths = [[NSArray alloc] initWithObjects:@"Enero",@"Febrero",nil];
+    //self.arrayDenomination = [[NSMutableArray alloc] initWithObjects:@"1/2",@"1",nil];
+    //self.arrayYears = [[NSMutableArray alloc] initWithObjects:@"1923",@"1924",nil];
+    self.arrayMonths = [[NSMutableArray alloc] initWithObjects:@"Enero",@"Febrero",@"Marzo",@"Abril",@"Mayo",@"Junio",@"Julio",@"Agosto",@"Septiembre",@"Octubre",@"Noviembre",@"Diciembre",nil];
     
     
     
@@ -158,6 +198,76 @@
         return [arrayYears objectAtIndex:row];
     }
     return [arrayMonths objectAtIndex:row];
+    
+}
+
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
+    UILabel* tView = (UILabel*)view;
+    if (!tView){
+        tView = [[UILabel alloc] init];
+        // Setup label properties - frame, font, colors etc
+        tView.font = [UIFont systemFontOfSize:14];
+        
+    }
+    // Fill the label text here
+    if (component == 0) {
+        tView.text = [arrayDenomination objectAtIndex:row];
+        tView.textAlignment = NSTextAlignmentCenter;
+    }
+    if (component == 1) {
+        tView.text = [arrayYears objectAtIndex:row];
+        tView.textAlignment = NSTextAlignmentRight;
+        tView.textColor = [UIColor blueColor];
+
+    }
+    if (component == 2){
+        tView.text = [arrayMonths objectAtIndex:row];
+        tView.textAlignment = NSTextAlignmentRight;
+        tView.textColor = [UIColor redColor];
+
+    }
+    return tView;
+}
+
+
+-(void)queryDataBaseWithQuery:(NSString *)theQuery withStatement:(sqlite3_stmt *)theStatement InsertingInArray:(NSMutableArray *)theArray{
+
+    
+    NSString *ruta = [[NSString alloc] init];
+    NSArray *arregloUbicaciones = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+    ruta = [[arregloUbicaciones objectAtIndex:0] stringByAppendingPathComponent:@"bp.sql"];
+    NSLog(@"Numero de archivos %lu", (unsigned long)[arregloUbicaciones count]);
+    
+    if(sqlite3_open([ruta UTF8String], &db)){
+        sqlite3_close(db);
+        NSLog(@"No se pudo abrir la base de datos");
+    }
+    else{
+        NSLog(@"Abrió la base de datos");
+    }
+    
+    if(sqlite3_open([ruta UTF8String], &db)){
+        sqlite3_close(db);
+        NSLog(@"No se pudo abrir la base de datos");
+    }
+    else{
+        NSLog(@"Abrió la base de datos");
+    }
+    
+    
+    if(sqlite3_prepare(db, [theQuery UTF8String], -1, &theStatement, nil) == SQLITE_OK){
+        while (sqlite3_step(theStatement) == SQLITE_ROW) {
+            
+            char *dataChar = (char *) sqlite3_column_text(theStatement, 0);
+            NSString *dataString = dataChar == nil ? @"": [[NSString alloc] initWithUTF8String:dataChar];
+            [theArray addObject:dataString];
+            NSLog(@"Consultando base");
+            
+        }
+        
+    }
+    
+    sqlite3_close(db);
     
 }
 

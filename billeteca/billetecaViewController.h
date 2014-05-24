@@ -11,9 +11,13 @@
 
 @interface billetecaViewController : UIViewController<UIPickerViewDataSource,UIPickerViewDelegate>{
 
-     sqlite3 *db;
-     NSMutableArray *objectsDownloaded;
+    sqlite3 *db;
+    
     
 }
 @property (weak, nonatomic) IBOutlet UIPickerView *denominacion;
+
+
+
+
 @end
