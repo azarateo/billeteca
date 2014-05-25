@@ -85,14 +85,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return [denominations count];
 }
@@ -101,10 +99,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"banknoteFound" forIndexPath:indexPath];
-    cell.textLabel.text = [denominations objectAtIndex:indexPath.row];
-    //NSString *yearSpace = [yearString stringByAppendingString:@" "];
-    //NSString *issueDate = [yearSpace stringByAppendingString:monthString];
-    //cell.detailTextLabel.text = issueDate;
+    cell.textLabel.text = [[denominations objectAtIndex:indexPath.row] stringByAppendingString:@" pesos"];
+    NSString *yearSpace = [[years objectAtIndex:indexPath.row] stringByAppendingString:@" "];
+    NSString *issueDate = [yearSpace stringByAppendingString:[months objectAtIndex:indexPath.row]];
+    NSString *issueDate2 = [issueDate stringByAppendingString:@" - "];
+    NSString *detalle = [issueDate2 stringByAppendingString:[descriptions objectAtIndex:indexPath.row]];
+    cell.detailTextLabel.text = detalle;
     
     return cell;
 }
@@ -157,7 +157,10 @@
             dataChar = (char *) sqlite3_column_text(theStatement, 7);
             dataString = dataChar == nil ? @"": [[NSString alloc] initWithUTF8String:dataChar];
             [f1_4 addObject:dataString];
-            
+          
+            dataChar = (char *) sqlite3_column_text(theStatement, 8);
+            dataString = dataChar == nil ? @"": [[NSString alloc] initWithUTF8String:dataChar];
+            [descriptions addObject:dataString];
             
             NSLog(@"Consultando base");
             
