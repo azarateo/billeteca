@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface billetecaDetailViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *denominationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 
 @end
