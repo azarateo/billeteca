@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "sqlite3.h"
 
-@interface billetecaTableViewController : UITableViewController
+@interface billetecaTableViewController : UITableViewController{
+
+    sqlite3 *db;
+    
+}
+@property (strong, nonatomic) NSString *denominationString;
+@property (strong, nonatomic) NSString *yearString;
+@property (strong, nonatomic) NSString *monthString;
+
+
 
 @end

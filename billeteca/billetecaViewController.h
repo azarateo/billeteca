@@ -16,6 +16,7 @@
     
 }
 @property (weak, nonatomic) IBOutlet UIPickerView *denominacion;
+- (IBAction)findBanknotes:(id)sender;
 
 
 

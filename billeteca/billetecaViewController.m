@@ -7,6 +7,7 @@
 //
 
 #import "billetecaViewController.h"
+#import "billetecaTableViewController.h"
 #import <Parse/Parse.h>
 
 @interface billetecaViewController ()
@@ -18,6 +19,7 @@
 @end
 
 @implementation billetecaViewController
+@synthesize denominacion;
 @synthesize arrayDenomination;
 @synthesize arrayYears;
 @synthesize arrayMonths;
@@ -269,6 +271,29 @@
     
     sqlite3_close(db);
     
+}
+
+- (IBAction)findBanknotes:(id)sender {
+    
+    NSLog(@"Denominacion %@", [arrayDenomination objectAtIndex:[denominacion selectedRowInComponent:0]]);
+    NSLog(@"Año %@", [arrayYears objectAtIndex:[denominacion selectedRowInComponent:1]]);
+    NSLog(@"Mes %@", [arrayMonths objectAtIndex:[denominacion selectedRowInComponent:2]]);
+
+
+}
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+
+    if([[segue identifier] isEqualToString:@"foundBanknotes"]){
+        
+        if([[segue destinationViewController] isKindOfClass:[billetecaTableViewController class]]){
+            [[segue destinationViewController] setDenominationString:[arrayDenomination objectAtIndex:[denominacion selectedRowInComponent:0]]];
+        }
+        
+    }
+    
+
 }
 
 @end

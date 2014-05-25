@@ -13,6 +13,10 @@
 @end
 
 @implementation billetecaTableViewController
+@synthesize denominationString;
+@synthesize yearString;
+@synthesize monthString;
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,6 +30,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSLog(@"Denominacion para busqueda %@", denominationString);
+    NSLog(@"Denominacion para busqueda %@", yearString);
+    NSLog(@"Denominacion para busqueda %@", monthString);
+
+
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -46,26 +56,27 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return 10;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"banknoteFound" forIndexPath:indexPath];
+    cell.textLabel.text = denominationString;
+    NSString *issueDate = [yearString stringByAppendingString:monthString];
+    cell.detailTextLabel.text = issueDate;
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

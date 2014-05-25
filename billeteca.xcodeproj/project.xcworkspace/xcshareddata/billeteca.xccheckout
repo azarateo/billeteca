@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>93D30F98-EE82-46B6-994E-58A7F0BB0875</string>
+	<key>IDESourceControlProjectName</key>
+	<string>billeteca</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>487D4337-AF54-4009-A886-1222B6A5176D</key>
+		<string>https://github.com/azarateo/billeteca.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>billeteca.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>487D4337-AF54-4009-A886-1222B6A5176D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/azarateo/billeteca.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>487D4337-AF54-4009-A886-1222B6A5176D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>487D4337-AF54-4009-A886-1222B6A5176D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>billeteca</string>
+		</dict>
+	</array>
+</dict>
+</plist>
