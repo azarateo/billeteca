@@ -14,6 +14,17 @@
     sqlite3 *db;
     
 }
+@property (strong, nonatomic) NSMutableArray *denominations;
+@property (strong, nonatomic) NSMutableArray *years;
+@property (strong, nonatomic) NSMutableArray *months;
+@property (strong, nonatomic) NSMutableArray *days;
+@property (strong, nonatomic) NSMutableArray *f8_10;
+@property (strong, nonatomic) NSMutableArray *f5_7;
+@property (strong, nonatomic) NSMutableArray *f1_4;
+@property (strong, nonatomic) NSMutableArray *descriptions;
+
+
+
 @property (strong, nonatomic) NSString *denominationString;
 @property (strong, nonatomic) NSString *yearString;
 @property (strong, nonatomic) NSString *monthString;

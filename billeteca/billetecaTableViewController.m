@@ -13,6 +13,14 @@
 @end
 
 @implementation billetecaTableViewController
+@synthesize denominations;
+@synthesize years;
+@synthesize months;
+@synthesize days;
+@synthesize f8_10;
+@synthesize f5_7;
+@synthesize f1_4;
+@synthesize descriptions;
 @synthesize denominationString;
 @synthesize yearString;
 @synthesize monthString;
@@ -31,11 +39,34 @@
 {
     [super viewDidLoad];
     
+    denominations = [[NSMutableArray alloc] init];
+    years = [[NSMutableArray alloc] init];
+    months = [[NSMutableArray alloc] init];
+    days = [[NSMutableArray alloc] init];
+    f8_10 = [[NSMutableArray alloc] init];
+    f5_7 = [[NSMutableArray alloc] init];
+    f1_4 = [[NSMutableArray alloc] init];
+    descriptions = [[NSMutableArray alloc] init];
+    
+
+    
     NSLog(@"Denominacion para busqueda %@", denominationString);
-    NSLog(@"Denominacion para busqueda %@", yearString);
-    NSLog(@"Denominacion para busqueda %@", monthString);
+    NSLog(@"Año para busqueda %@", yearString);
+    NSLog(@"Mes para busqueda %@", monthString);
 
 
+    sqlite3_stmt *statement;
+    NSString *query = @"select distinct * from billete where denominacion = '";
+    NSString *query2 = [query stringByAppendingString:denominationString];
+    NSString *query3 = [query2 stringByAppendingString:@"' AND year = '"];
+    NSString *query4 = [query3 stringByAppendingString:yearString];
+    NSString *query5 = [query4 stringByAppendingString:@"' AND month = '"];
+    NSString *query6 = [query5 stringByAppendingString:monthString];
+    NSString *query7 = [query6 stringByAppendingString:@"';"];
+    
+    NSLog(@"Se esta realizando la consulta:%@ ",query7);
+    
+    [self queryDataBaseWithQuery:query7 withStatement:statement];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -63,19 +94,81 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 10;
+    return [denominations count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"banknoteFound" forIndexPath:indexPath];
-    cell.textLabel.text = denominationString;
-    NSString *issueDate = [yearString stringByAppendingString:monthString];
-    cell.detailTextLabel.text = issueDate;
+    cell.textLabel.text = [denominations objectAtIndex:indexPath.row];
+    //NSString *yearSpace = [yearString stringByAppendingString:@" "];
+    //NSString *issueDate = [yearSpace stringByAppendingString:monthString];
+    //cell.detailTextLabel.text = issueDate;
     
     return cell;
 }
+
+-(void)queryDataBaseWithQuery:(NSString *)theQuery withStatement:(sqlite3_stmt *)theStatement{
+    
+    
+    NSString *ruta = [[NSString alloc] init];
+    NSArray *arregloUbicaciones = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+    ruta = [[arregloUbicaciones objectAtIndex:0] stringByAppendingPathComponent:@"bp.sql"];
+    NSLog(@"Numero de archivos %lu", (unsigned long)[arregloUbicaciones count]);
+
+    
+    if(sqlite3_open([ruta UTF8String], &db)){
+        sqlite3_close(db);
+        NSLog(@"No se pudo abrir la base de datos");
+    }
+    else{
+        NSLog(@"Abrió la base de datos para traer los billetes de la busqueda");
+    }
+    
+    
+    if(sqlite3_prepare(db, [theQuery UTF8String], -1, &theStatement, nil) == SQLITE_OK){
+        while (sqlite3_step(theStatement) == SQLITE_ROW) {
+            
+            char *dataChar = (char *) sqlite3_column_text(theStatement, 1);
+            NSString *dataString = dataChar == nil ? @"": [[NSString alloc] initWithUTF8String:dataChar];
+            [denominations addObject:dataString];
+            
+            dataChar = (char *) sqlite3_column_text(theStatement, 2);
+            dataString = dataChar == nil ? @"": [[NSString alloc] initWithUTF8String:dataChar];
+            [years addObject:dataString];
+            
+            dataChar = (char *) sqlite3_column_text(theStatement, 3);
+            dataString = dataChar == nil ? @"": [[NSString alloc] initWithUTF8String:dataChar];
+            [months addObject:dataString];
+            
+            dataChar = (char *) sqlite3_column_text(theStatement, 4);
+            dataString = dataChar == nil ? @"": [[NSString alloc] initWithUTF8String:dataChar];
+            [days addObject:dataString];
+            
+            dataChar = (char *) sqlite3_column_text(theStatement, 5);
+            dataString = dataChar == nil ? @"": [[NSString alloc] initWithUTF8String:dataChar];
+            [f8_10 addObject:dataString];
+            
+            dataChar = (char *) sqlite3_column_text(theStatement, 6);
+            dataString = dataChar == nil ? @"": [[NSString alloc] initWithUTF8String:dataChar];
+            [f5_7 addObject:dataString];
+            
+            dataChar = (char *) sqlite3_column_text(theStatement, 7);
+            dataString = dataChar == nil ? @"": [[NSString alloc] initWithUTF8String:dataChar];
+            [f1_4 addObject:dataString];
+            
+            
+            NSLog(@"Consultando base");
+            
+        }
+        
+    }
+    
+    sqlite3_close(db);
+    
+}
+
 
 
 /*

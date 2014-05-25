@@ -101,7 +101,7 @@
                     NSLog(@"No se insertó la fila");
                 }
                 else{
-                    NSLog(@"Se insertó la fila");
+                    
                 }
                 
             }
@@ -248,22 +248,16 @@
         NSLog(@"Abrió la base de datos");
     }
     
-    if(sqlite3_open([ruta UTF8String], &db)){
-        sqlite3_close(db);
-        NSLog(@"No se pudo abrir la base de datos");
-    }
-    else{
-        NSLog(@"Abrió la base de datos");
-    }
-    
     
     if(sqlite3_prepare(db, [theQuery UTF8String], -1, &theStatement, nil) == SQLITE_OK){
+        
+        NSLog(@"Consultando base");
+
         while (sqlite3_step(theStatement) == SQLITE_ROW) {
             
             char *dataChar = (char *) sqlite3_column_text(theStatement, 0);
             NSString *dataString = dataChar == nil ? @"": [[NSString alloc] initWithUTF8String:dataChar];
             [theArray addObject:dataString];
-            NSLog(@"Consultando base");
             
         }
         
@@ -289,6 +283,9 @@
         
         if([[segue destinationViewController] isKindOfClass:[billetecaTableViewController class]]){
             [[segue destinationViewController] setDenominationString:[arrayDenomination objectAtIndex:[denominacion selectedRowInComponent:0]]];
+            [[segue destinationViewController] setYearString:[arrayYears objectAtIndex:[denominacion selectedRowInComponent:1]]];
+            [[segue destinationViewController] setMonthString:[arrayMonths objectAtIndex:[denominacion selectedRowInComponent:2]]];
+
         }
         
     }
