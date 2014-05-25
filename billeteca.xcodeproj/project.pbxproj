@@ -25,6 +25,7 @@
 		FC685CBC19282938000272AF /* billetecaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC685CBB19282938000272AF /* billetecaTests.m */; };
 		FC685CC619282B37000272AF /* billetekaback.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC685CC519282B37000272AF /* billetekaback.jpg */; };
 		FC685CC919283012000272AF /* billetekalog.png in Resources */ = {isa = PBXBuildFile; fileRef = FC685CC819283012000272AF /* billetekalog.png */; };
+		FCD4F0C91932A64C00B03FCD /* billetecaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD4F0C81932A64C00B03FCD /* billetecaDetailViewController.m */; };
 		FCFF277F1930F79E0023897C /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFF277E1930F79E0023897C /* Parse.framework */; };
 		FCFF27811930F7CE0023897C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFF27801930F7CE0023897C /* SystemConfiguration.framework */; };
 		FCFF27831930F7D70023897C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFF27821930F7D70023897C /* StoreKit.framework */; };
@@ -73,6 +74,8 @@
 		FC685CBB19282938000272AF /* billetecaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = billetecaTests.m; sourceTree = "<group>"; };
 		FC685CC519282B37000272AF /* billetekaback.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = billetekaback.jpg; sourceTree = "<group>"; };
 		FC685CC819283012000272AF /* billetekalog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = billetekalog.png; sourceTree = "<group>"; };
+		FCD4F0C71932A64C00B03FCD /* billetecaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = billetecaDetailViewController.h; sourceTree = "<group>"; };
+		FCD4F0C81932A64C00B03FCD /* billetecaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = billetecaDetailViewController.m; sourceTree = "<group>"; };
 		FCFF277E1930F79E0023897C /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../../Downloads/Parse.framework; sourceTree = "<group>"; };
 		FCFF27801930F7CE0023897C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FCFF27821930F7D70023897C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -192,6 +195,7 @@
 		FC685C9319282938000272AF /* billeteca */ = {
 			isa = PBXGroup;
 			children = (
+				FCD4F0CA1932A65500B03FCD /* detail */,
 				FC066D901928F13500FEC3E8 /* resultsTable */,
 				FC066D8F1928F11100FEC3E8 /* app */,
 				FC066D8E1928F10300FEC3E8 /* home */,
@@ -240,6 +244,15 @@
 				FC685CC519282B37000272AF /* billetekaback.jpg */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		FCD4F0CA1932A65500B03FCD /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				FCD4F0C71932A64C00B03FCD /* billetecaDetailViewController.h */,
+				FCD4F0C81932A64C00B03FCD /* billetecaDetailViewController.m */,
+			);
+			name = detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCD4F0C91932A64C00B03FCD /* billetecaDetailViewController.m in Sources */,
 				FC685C9E19282938000272AF /* billetecaAppDelegate.m in Sources */,
 				FC066D931928F16200FEC3E8 /* billetecaTableViewController.m in Sources */,
 				FC685CA719282938000272AF /* billetecaViewController.m in Sources */,

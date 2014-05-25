@@ -48,12 +48,9 @@
     f1_4 = [[NSMutableArray alloc] init];
     descriptions = [[NSMutableArray alloc] init];
     
-
-    
     NSLog(@"Denominacion para busqueda %@", denominationString);
     NSLog(@"Año para busqueda %@", yearString);
     NSLog(@"Mes para busqueda %@", monthString);
-
 
     sqlite3_stmt *statement;
     NSString *query = @"select distinct * from billete where denominacion = '";
@@ -105,7 +102,6 @@
     NSString *issueDate2 = [issueDate stringByAppendingString:@" - "];
     NSString *detalle = [issueDate2 stringByAppendingString:[descriptions objectAtIndex:indexPath.row]];
     cell.detailTextLabel.text = detalle;
-    
     return cell;
 }
 
