@@ -150,7 +150,7 @@
             </objects>
             <point key="canvasLocation" x="661" y="91"/>
         </scene>
-        <!--Billeteca Table View Controller-->
+        <!--Billeteca Table View Controller - Resultados-->
         <scene sceneID="grj-8T-6zG">
             <objects>
                 <tableViewController id="lD6-cM-fMT" customClass="billetecaTableViewController" sceneMemberID="viewController">
@@ -201,7 +201,7 @@
                             <outlet property="delegate" destination="lD6-cM-fMT" id="z2U-uZ-hAx"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="gad-nT-aIX"/>
+                    <navigationItem key="navigationItem" title="Resultados" id="gad-nT-aIX"/>
                     <connections>
                         <outlet property="resultsTable" destination="D35-8d-cmJ" id="Co2-rE-Qvs"/>
                     </connections>
