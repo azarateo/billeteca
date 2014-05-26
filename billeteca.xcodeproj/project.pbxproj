@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9923D4C19336721003262E3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9923D4B19336721003262E3 /* Parse.framework */; };
 		FC066D931928F16200FEC3E8 /* billetecaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC066D921928F16200FEC3E8 /* billetecaTableViewController.m */; };
 		FC685C8E19282938000272AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC685C8D19282938000272AF /* Foundation.framework */; };
 		FC685C9019282938000272AF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC685C8F19282938000272AF /* CoreGraphics.framework */; };
@@ -26,7 +27,6 @@
 		FC685CC619282B37000272AF /* billetekaback.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC685CC519282B37000272AF /* billetekaback.jpg */; };
 		FC685CC919283012000272AF /* billetekalog.png in Resources */ = {isa = PBXBuildFile; fileRef = FC685CC819283012000272AF /* billetekalog.png */; };
 		FCD4F0C91932A64C00B03FCD /* billetecaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD4F0C81932A64C00B03FCD /* billetecaDetailViewController.m */; };
-		FCFF277F1930F79E0023897C /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFF277E1930F79E0023897C /* Parse.framework */; };
 		FCFF27811930F7CE0023897C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFF27801930F7CE0023897C /* SystemConfiguration.framework */; };
 		FCFF27831930F7D70023897C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFF27821930F7D70023897C /* StoreKit.framework */; };
 		FCFF27851930F7DF0023897C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFF27841930F7DF0023897C /* Security.framework */; };
@@ -50,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A9923D4B19336721003262E3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = billeteca/Parse.framework; sourceTree = "<group>"; };
 		FC066D911928F16200FEC3E8 /* billetecaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = billetecaTableViewController.h; sourceTree = "<group>"; };
 		FC066D921928F16200FEC3E8 /* billetecaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = billetecaTableViewController.m; sourceTree = "<group>"; };
 		FC685C8A19282938000272AF /* billeteca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = billeteca.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9923D4C19336721003262E3 /* Parse.framework in Frameworks */,
 				FCFF27931930F8450023897C /* libsqlite3.dylib in Frameworks */,
 				FCFF27911930F8370023897C /* AudioToolbox.framework in Frameworks */,
 				FCFF278F1930F82A0023897C /* CFNetwork.framework in Frameworks */,
@@ -105,7 +107,6 @@
 				FCFF27851930F7DF0023897C /* Security.framework in Frameworks */,
 				FCFF27831930F7D70023897C /* StoreKit.framework in Frameworks */,
 				FCFF27811930F7CE0023897C /* SystemConfiguration.framework in Frameworks */,
-				FCFF277F1930F79E0023897C /* Parse.framework in Frameworks */,
 				FC685C9219282938000272AF /* UIKit.framework in Frameworks */,
 				FC685C8E19282938000272AF /* Foundation.framework in Frameworks */,
 			);
@@ -173,6 +174,7 @@
 		FC685C8C19282938000272AF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A9923D4B19336721003262E3 /* Parse.framework */,
 				FCFF27921930F8450023897C /* libsqlite3.dylib */,
 				FCFF27901930F8370023897C /* AudioToolbox.framework */,
 				FCFF278E1930F82A0023897C /* CFNetwork.framework */,
@@ -505,6 +507,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/azarateo/Downloads,
+					"$(PROJECT_DIR)/billeteca",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "billeteca/billeteca-Prefix.pch";
@@ -525,6 +528,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/azarateo/Downloads,
+					"$(PROJECT_DIR)/billeteca",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "billeteca/billeteca-Prefix.pch";
