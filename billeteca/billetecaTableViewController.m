@@ -103,7 +103,7 @@
     NSString *yearSpace = [[years objectAtIndex:indexPath.row] stringByAppendingString:@" "];
     NSString *issueDate = [yearSpace stringByAppendingString:[months objectAtIndex:indexPath.row]];
     NSString *issueDate2 = [issueDate stringByAppendingString:@" - "];
-    NSString *detalle = [issueDate2 stringByAppendingString:[descriptions objectAtIndex:indexPath.row]];
+    NSString *detalle = [issueDate2 stringByAppendingString:[seriesArray objectAtIndex:indexPath.row]];
     cell.detailTextLabel.text = detalle;
     return cell;
 }
@@ -184,19 +184,19 @@
                 if([segue.destinationViewController isKindOfClass:[billetecaDetailViewController class]]){
                     
                     //Variables para el detalle
-                    NSString *denominacion = [denominations objectAtIndex:indice.row];
-                    NSString *year = [years objectAtIndex:indice.row];
-                    NSString *month = [months objectAtIndex:indice.row];
-                    NSString *day = [days objectAtIndex:indice.row];
-                    NSString *series = [seriesArray objectAtIndex:indice.row];
-                    NSString *f8_10s = [f8_10 objectAtIndex:indice.row];
-                    NSString *f5_7s = [f5_7 objectAtIndex:indice.row];
-                    NSString *f1_4s = [f1_4 objectAtIndex:indice.row];
-                    NSString *description = [descriptions objectAtIndex:indice.row];
+                    NSString *sdenominacion = [denominations objectAtIndex:indice.row];
+                    NSString *syear = [years objectAtIndex:indice.row];
+                    NSString *smonth = [months objectAtIndex:indice.row];
+                    NSString *sday = [days objectAtIndex:indice.row];
+                    NSString *sseries = [seriesArray objectAtIndex:indice.row];
+                    NSString *sf8_10s = [f8_10 objectAtIndex:indice.row];
+                    NSString *sf5_7s = [f5_7 objectAtIndex:indice.row];
+                    NSString *sf1_4s = [f1_4 objectAtIndex:indice.row];
+                    NSString *sdescription = [descriptions objectAtIndex:indice.row];
                     
                     //Configurar la vista de detalle
                     billetecaDetailViewController *vistaDestino = segue.destinationViewController;
-                    [self configuraVista:vistaDestino condenominacion:denominacion year:year month:month day:day series:series f8_10s:f8_10s f5_7s:f5_7s f1_4s:f1_4s descriptions:description];
+                    [self configuraVista:vistaDestino condenominacion:sdenominacion year:syear month:smonth day:sday series:sseries f8_10s:sf8_10s f5_7s:sf5_7s f1_4s:sf1_4s descriptions:sdescription];
                 }
             }
         }
@@ -216,18 +216,16 @@
          descriptions:(NSString *)description
 {
     
-    vista.denominationLabel.text = denominacion;
+    vista.denominationString = denominacion;
     
-    NSString *date1 = [year stringByAppendingString:@" "];
-    NSString *date2 = [date1 stringByAppendingString:month];
-    NSString *date3 = [date2 stringByAppendingString:@" "];
-    NSString *dateString = [date3 stringByAppendingString:day];
-    vista.dateLabel.text = dateString;
-    vista.descriptionLabel.text = description;
-    vista.seriesLabel.text = series;
-    vista.f8_10.text = f8_10s;
-    vista.f5_7.text = f5_7s;
-    vista.f1_4.text = f1_4s;
+    
+    NSString *dateS = [NSString stringWithFormat:@"%@ %@ %@",year,month,day];
+    vista.dateString= dateS;
+    vista.descriptionString = description;
+    vista.seriesString = series;
+    vista.f8_10String = f8_10s;
+    vista.f5_7String = f5_7s;
+    vista.f1_4String = f1_4s;
     
     
 }

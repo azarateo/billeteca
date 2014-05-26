@@ -13,6 +13,23 @@
 @end
 
 @implementation billetecaDetailViewController
+@synthesize denominationLabel;
+@synthesize dateLabel;
+@synthesize seriesLabel;
+@synthesize descriptionLabel;
+@synthesize f8_10;
+@synthesize f5_7;
+@synthesize f1_4;
+
+@synthesize denominationString;
+@synthesize dateString;
+@synthesize descriptionString;
+@synthesize seriesString;
+@synthesize f8_10String;
+@synthesize f5_7String;
+@synthesize f1_4String;
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,6 +43,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self actualizarUI];
     // Do any additional setup after loading the view.
 }
 
@@ -33,6 +51,19 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+
+-(void)actualizarUI{
+    self.denominationLabel.text = denominationString;
+    self.dateLabel.text = dateString;
+    self.descriptionLabel.text = descriptionString;
+    self.seriesLabel.text = seriesString;
+    self.f8_10.text = f8_10String;
+    self.f5_7.text = f5_7String;
+    self.f1_4.text = f1_4String;
+    
 }
 
 /*

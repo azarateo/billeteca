@@ -17,4 +17,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *f5_7;
 @property (weak, nonatomic) IBOutlet UILabel *f1_4;
 
+
+@property (weak, nonatomic) NSString *denominationString;
+@property (weak, nonatomic) NSString *dateString;
+@property (weak, nonatomic) NSString *descriptionString;
+@property (weak, nonatomic) NSString *seriesString;
+@property (weak, nonatomic) NSString *f8_10String;
+@property (weak, nonatomic) NSString *f5_7String;
+@property (weak, nonatomic) NSString *f1_4String;
+
 @end
