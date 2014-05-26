@@ -129,37 +129,11 @@
     [self queryDataBaseWithQuery:yearQuery withStatement:statement InsertingInArray:arrayYears];
 
     
-#pragma mark consulta Denominaciones
-    
-    /*if(sqlite3_prepare(db, [denominationsQuery UTF8String], -1, &statement, nil) == SQLITE_OK){
-        while (sqlite3_step(statement) == SQLITE_ROW) {
-            char *denominacionChar = (char *) sqlite3_column_text(statement, 0);
-            //NSString *denominacionString = [[NSString alloc] initWithUTF8String:denominacionChar];
-            
-             NSString *denominacionString = denominacionChar == nil ? @"" : [[NSString alloc] initWithUTF8String:denominacionChar];
-            
-            [arrayDenomination addObject:denominacionString];
-            NSLog(@"Consultando denominaciones");
-
-        }
-       
-    }
-    else{
-        NSLog(@"No se consultó la tabla");
-        
-    }
-    sqlite3_close(db);*/
-
     
     
     
-    
-    
-    //User Interface load
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    //self.arrayDenomination = [[NSMutableArray alloc] initWithObjects:@"1/2",@"1",nil];
-    //self.arrayYears = [[NSMutableArray alloc] initWithObjects:@"1923",@"1924",nil];
+
     self.arrayMonths = [[NSMutableArray alloc] initWithObjects:@"Enero",@"Febrero",@"Marzo",@"Abril",@"Mayo",@"Junio",@"Julio",@"Agosto",@"Septiembre",@"Octubre",@"Noviembre",@"Diciembre",nil];
     
     
