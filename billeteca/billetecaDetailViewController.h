@@ -11,5 +11,10 @@
 @interface billetecaDetailViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *denominationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *seriesLabel;
+@property (weak, nonatomic) IBOutlet UILabel *f8_10;
+@property (weak, nonatomic) IBOutlet UILabel *f5_7;
+@property (weak, nonatomic) IBOutlet UILabel *f1_4;
 
 @end

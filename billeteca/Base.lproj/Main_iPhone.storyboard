@@ -191,7 +191,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="ERK-gD-zmt" kind="push" id="dIe-yL-dFQ"/>
+                                    <segue destination="ERK-gD-zmt" kind="push" identifier="banknoteDetail" id="dIe-yL-dFQ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -202,15 +202,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="gad-nT-aIX"/>
+                    <connections>
+                        <outlet property="resultsTable" destination="D35-8d-cmJ" id="Co2-rE-Qvs"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ddn-Wz-2h9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1037" y="91"/>
         </scene>
-        <!--View Controller-->
+        <!--Billeteca Detail View Controller-->
         <scene sceneID="BJD-C4-NX1">
             <objects>
-                <viewController id="ERK-gD-zmt" sceneMemberID="viewController">
+                <viewController id="ERK-gD-zmt" customClass="billetecaDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lzc-IN-Bke"/>
                         <viewControllerLayoutGuide type="bottom" id="4Bz-jm-fiV"/>
@@ -270,13 +273,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 - 7" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lM5-hF-Kyh">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 - 7" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lM5-hF-Kyh">
                                 <rect key="frame" x="20" y="360" width="63" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 - 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7u-Oy-Ffb">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 - 4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7u-Oy-Ffb">
                                 <rect key="frame" x="20" y="389" width="63" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -378,6 +381,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Wce-jE-wTk"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="35y-oM-N0B" id="3P9-7m-eNb"/>
+                        <outlet property="denominationLabel" destination="GkF-Oz-MX9" id="hwn-ju-V5K"/>
+                        <outlet property="descriptionLabel" destination="4cR-cH-pQf" id="iWr-Gj-PsO"/>
+                        <outlet property="f1_4" destination="Kgi-TC-pWn" id="EnE-Iw-YuV"/>
+                        <outlet property="f5_7" destination="8g4-fu-DTv" id="zTa-lx-j6i"/>
+                        <outlet property="f8_10" destination="gVb-8j-FHX" id="gRg-Xf-pzJ"/>
+                        <outlet property="seriesLabel" destination="URu-2N-Vsg" id="ndG-m8-BrP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ov6-cu-PGv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

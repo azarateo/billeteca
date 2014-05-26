@@ -7,6 +7,7 @@
 //
 
 #import "billetecaTableViewController.h"
+#import "billetecaDetailViewController.h"
 
 @interface billetecaTableViewController ()
 
@@ -17,6 +18,7 @@
 @synthesize years;
 @synthesize months;
 @synthesize days;
+@synthesize seriesArray;
 @synthesize f8_10;
 @synthesize f5_7;
 @synthesize f1_4;
@@ -43,6 +45,7 @@
     years = [[NSMutableArray alloc] init];
     months = [[NSMutableArray alloc] init];
     days = [[NSMutableArray alloc] init];
+    seriesArray = [[NSMutableArray alloc] init];
     f8_10 = [[NSMutableArray alloc] init];
     f5_7 = [[NSMutableArray alloc] init];
     f1_4 = [[NSMutableArray alloc] init];
@@ -144,17 +147,21 @@
             
             dataChar = (char *) sqlite3_column_text(theStatement, 5);
             dataString = dataChar == nil ? @"": [[NSString alloc] initWithUTF8String:dataChar];
-            [f8_10 addObject:dataString];
+            [seriesArray addObject:dataString];
             
             dataChar = (char *) sqlite3_column_text(theStatement, 6);
             dataString = dataChar == nil ? @"": [[NSString alloc] initWithUTF8String:dataChar];
-            [f5_7 addObject:dataString];
+            [f8_10 addObject:dataString];
             
             dataChar = (char *) sqlite3_column_text(theStatement, 7);
             dataString = dataChar == nil ? @"": [[NSString alloc] initWithUTF8String:dataChar];
+            [f5_7 addObject:dataString];
+            
+            dataChar = (char *) sqlite3_column_text(theStatement, 8);
+            dataString = dataChar == nil ? @"": [[NSString alloc] initWithUTF8String:dataChar];
             [f1_4 addObject:dataString];
           
-            dataChar = (char *) sqlite3_column_text(theStatement, 8);
+            dataChar = (char *) sqlite3_column_text(theStatement, 9);
             dataString = dataChar == nil ? @"": [[NSString alloc] initWithUTF8String:dataChar];
             [descriptions addObject:dataString];
             
@@ -168,6 +175,62 @@
     
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([sender isKindOfClass:[UITableViewCell class]]){
+        NSIndexPath *indice = [_resultsTable indexPathForCell:sender];
+        if(indice){
+            if([segue.identifier isEqualToString:@"banknoteDetail"]){
+                if([segue.destinationViewController isKindOfClass:[billetecaDetailViewController class]]){
+                    
+                    //Variables para el detalle
+                    NSString *denominacion = [denominations objectAtIndex:indice.row];
+                    NSString *year = [years objectAtIndex:indice.row];
+                    NSString *month = [months objectAtIndex:indice.row];
+                    NSString *day = [days objectAtIndex:indice.row];
+                    NSString *series = [seriesArray objectAtIndex:indice.row];
+                    NSString *f8_10s = [f8_10 objectAtIndex:indice.row];
+                    NSString *f5_7s = [f5_7 objectAtIndex:indice.row];
+                    NSString *f1_4s = [f1_4 objectAtIndex:indice.row];
+                    NSString *description = [descriptions objectAtIndex:indice.row];
+                    
+                    //Configurar la vista de detalle
+                    billetecaDetailViewController *vistaDestino = segue.destinationViewController;
+                    [self configuraVista:vistaDestino condenominacion:denominacion year:year month:month day:day series:series f8_10s:f8_10s f5_7s:f5_7s f1_4s:f1_4s descriptions:description];
+                }
+            }
+        }
+    }
+    
+}
+
+-(void)configuraVista:(billetecaDetailViewController *)vista
+      condenominacion:(NSString *)denominacion
+                 year:(NSString *)year
+                month:(NSString *)month
+                  day:(NSString *)day
+               series:(NSString *)series
+               f8_10s:(NSString *)f8_10s
+                f5_7s:(NSString *)f5_7s
+                f1_4s:(NSString *)f1_4s
+         descriptions:(NSString *)description
+{
+    
+    vista.denominationLabel.text = denominacion;
+    
+    NSString *date1 = [year stringByAppendingString:@" "];
+    NSString *date2 = [date1 stringByAppendingString:month];
+    NSString *date3 = [date2 stringByAppendingString:@" "];
+    NSString *dateString = [date3 stringByAppendingString:day];
+    vista.dateLabel.text = dateString;
+    vista.descriptionLabel.text = description;
+    vista.seriesLabel.text = series;
+    vista.f8_10.text = f8_10s;
+    vista.f5_7.text = f5_7s;
+    vista.f1_4.text = f1_4s;
+    
+    
+}
 
 
 /*
