@@ -51,9 +51,9 @@
     f1_4 = [[NSMutableArray alloc] init];
     descriptions = [[NSMutableArray alloc] init];
     
-    NSLog(@"Denominacion para busqueda %@", denominationString);
-    NSLog(@"Año para busqueda %@", yearString);
-    NSLog(@"Mes para busqueda %@", monthString);
+    NSLog(@"Denominacion para busqueda -%@-", denominationString);
+    NSLog(@"Año para busqueda -%@-", yearString);
+    NSLog(@"Mes para busqueda -%@-", monthString);
 
     sqlite3_stmt *statement;
     
@@ -62,9 +62,38 @@
     NSLog(@"Se esta realizando la consulta:%@ ",query);
     [self queryDataBaseWithQuery:query withStatement:statement];
     }
-    
     if(![denominationString isEqual:@""] && ![yearString  isEqual:@""] && [monthString  isEqual: @""]){
-        NSString *query = [NSString stringWithFormat:@"select distinct * from billete where denominacion = '%@' and year = '%@''",denominationString,yearString];
+        NSString *query = [NSString stringWithFormat:@"select distinct * from billete where denominacion = '%@' and year = '%@';",denominationString,yearString];
+        NSLog(@"Se esta realizando la consulta:%@ ",query);
+        [self queryDataBaseWithQuery:query withStatement:statement];
+    }
+    if(![denominationString isEqual:@""] && [yearString  isEqual:@""] && ![monthString  isEqual: @""]){
+        NSString *query = [NSString stringWithFormat:@"select distinct * from billete where denominacion = '%@' and month = '%@';",denominationString,monthString];
+        NSLog(@"Se esta realizando la consulta:%@ ",query);
+        [self queryDataBaseWithQuery:query withStatement:statement];
+    }
+    if([denominationString isEqual:@""] && ![yearString  isEqual:@""] && [monthString  isEqual: @""]){
+        NSString *query = [NSString stringWithFormat:@"select distinct * from billete where year = '%@' and month = '%@';",yearString,monthString];
+        NSLog(@"Se esta realizando la consulta:%@ ",query);
+        [self queryDataBaseWithQuery:query withStatement:statement];
+    }
+    if(![denominationString isEqual:@""] && [yearString  isEqual:@""] && [monthString  isEqual: @""]){
+        NSString *query = [NSString stringWithFormat:@"select distinct * from billete where denominacion = '%@';",denominationString];
+        NSLog(@"Se esta realizando la consulta:%@ ",query);
+        [self queryDataBaseWithQuery:query withStatement:statement];
+    }
+    if([denominationString isEqual:@""] && ![yearString  isEqual:@""] && [monthString  isEqual: @""]){
+        NSString *query = [NSString stringWithFormat:@"select distinct * from billete where year = '%@';",yearString];
+        NSLog(@"Se esta realizando la consulta:%@ ",query);
+        [self queryDataBaseWithQuery:query withStatement:statement];
+    }
+    if([denominationString isEqual:@""] && [yearString  isEqual:@""] && ![monthString  isEqual: @""]){
+        NSString *query = [NSString stringWithFormat:@"select distinct * from billete where month = '%@';",monthString];
+        NSLog(@"Se esta realizando la consulta:%@ ",query);
+        [self queryDataBaseWithQuery:query withStatement:statement];
+    }
+    if([denominationString isEqual:@""] && [yearString  isEqual:@""] && [monthString  isEqual: @""]){
+        NSString *query = [NSString stringWithFormat:@"select distinct * from billete;"];
         NSLog(@"Se esta realizando la consulta:%@ ",query);
         [self queryDataBaseWithQuery:query withStatement:statement];
     }
