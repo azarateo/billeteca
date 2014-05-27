@@ -56,23 +56,19 @@
     NSLog(@"Mes para busqueda %@", monthString);
 
     sqlite3_stmt *statement;
-    NSString *query = @"select distinct * from billete where denominacion = '";
-    NSString *query2 = [query stringByAppendingString:denominationString];
-    NSString *query3 = [query2 stringByAppendingString:@"' AND year = '"];
-    NSString *query4 = [query3 stringByAppendingString:yearString];
-    NSString *query5 = [query4 stringByAppendingString:@"' AND month = '"];
-    NSString *query6 = [query5 stringByAppendingString:monthString];
-    NSString *query7 = [query6 stringByAppendingString:@"';"];
     
-    NSLog(@"Se esta realizando la consulta:%@ ",query7);
+    if(![denominationString isEqual:@""] && ![yearString  isEqual:@""] && ![monthString  isEqual: @""]){
+        NSString *query = [NSString stringWithFormat:@"select distinct * from billete where denominacion = '%@' and year = '%@' and month = '%@';",denominationString,yearString,monthString];
+    NSLog(@"Se esta realizando la consulta:%@ ",query);
+    [self queryDataBaseWithQuery:query withStatement:statement];
+    }
     
-    [self queryDataBaseWithQuery:query7 withStatement:statement];
+    if(![denominationString isEqual:@""] && ![yearString  isEqual:@""] && [monthString  isEqual: @""]){
+        NSString *query = [NSString stringWithFormat:@"select distinct * from billete where denominacion = '%@' and year = '%@''",denominationString,yearString];
+        NSLog(@"Se esta realizando la consulta:%@ ",query);
+        [self queryDataBaseWithQuery:query withStatement:statement];
+    }
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning

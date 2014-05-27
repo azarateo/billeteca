@@ -26,20 +26,15 @@
 
 - (void)viewDidLoad
 {
-    
     ruta = [[NSString alloc] init];
     NSArray *arregloUbicaciones = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
     ruta = [[arregloUbicaciones objectAtIndex:0] stringByAppendingPathComponent:@"bp.sql"];
     NSLog(@"Numero de archivos %lu", (unsigned long)[arregloUbicaciones count]);
     
-    
-    
 #pragma mark variable initialization
-    arrayDenomination = [[NSMutableArray alloc] init];
-    arrayYears = [[NSMutableArray alloc] init];
-    arrayMonths = [[NSMutableArray alloc] init];
-    
-    
+    arrayDenomination = [[NSMutableArray alloc] initWithObjects:@"", nil];
+    arrayYears = [[NSMutableArray alloc] initWithObjects:@"", nil];
+    arrayMonths = [[NSMutableArray alloc] initWithObjects:@"", nil];
     
     if(sqlite3_open([ruta UTF8String], &db) != SQLITE_OK){
         sqlite3_close(db);
@@ -48,7 +43,6 @@
     else{
         NSLog(@"Abrió la base de datos");
     }
-   
 
     sqlite3_stmt *statement;
     NSString *denominationsQuery = @"select distinct denominacion from billete where denominacion is not null order by denominacion asc";
@@ -56,16 +50,9 @@
     
     [self queryDataBaseWithQuery:denominationsQuery withStatement:statement InsertingInArray:arrayDenomination];
     [self queryDataBaseWithQuery:yearQuery withStatement:statement InsertingInArray:arrayYears];
-
-    
-    
-    
-    
     [super viewDidLoad];
 
-    self.arrayMonths = [[NSMutableArray alloc] initWithObjects:@"Enero",@"Febrero",@"Marzo",@"Abril",@"Mayo",@"Junio",@"Julio",@"Agosto",@"Septiembre",@"Octubre",@"Noviembre",@"Diciembre",nil];
-    
-    
+    self.arrayMonths = [[NSMutableArray alloc] initWithObjects:@"",@"Enero",@"Febrero",@"Marzo",@"Abril",@"Mayo",@"Junio",@"Julio",@"Agosto",@"Septiembre",@"Octubre",@"Noviembre",@"Diciembre",nil];
     sqlite3_close(db);
 
 

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "billeteca/billetecaViewController.m"
-            timestampString = "422851323.626197"
+            timestampString = "422893748.912354"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
             landmarkName = "@implementation billetecaViewController"
             landmarkType = "3">
          </BreakpointContent>
