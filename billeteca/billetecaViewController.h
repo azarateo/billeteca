@@ -12,6 +12,7 @@
 @interface billetecaViewController : UIViewController<UIPickerViewDataSource,UIPickerViewDelegate>{
 
     sqlite3 *db;
+    NSString *ruta;
     
     
 }

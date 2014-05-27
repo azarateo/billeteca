@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FC066D931928F16200FEC3E8 /* billetecaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC066D921928F16200FEC3E8 /* billetecaTableViewController.m */; };
+		FC2BB7611934203600C5B77B /* billetecaLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2BB7601934203600C5B77B /* billetecaLoadingViewController.m */; };
 		FC685C8E19282938000272AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC685C8D19282938000272AF /* Foundation.framework */; };
 		FC685C9019282938000272AF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC685C8F19282938000272AF /* CoreGraphics.framework */; };
 		FC685C9219282938000272AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC685C9119282938000272AF /* UIKit.framework */; };
@@ -52,6 +53,8 @@
 /* Begin PBXFileReference section */
 		FC066D911928F16200FEC3E8 /* billetecaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = billetecaTableViewController.h; sourceTree = "<group>"; };
 		FC066D921928F16200FEC3E8 /* billetecaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = billetecaTableViewController.m; sourceTree = "<group>"; };
+		FC2BB75F1934203600C5B77B /* billetecaLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = billetecaLoadingViewController.h; sourceTree = "<group>"; };
+		FC2BB7601934203600C5B77B /* billetecaLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = billetecaLoadingViewController.m; sourceTree = "<group>"; };
 		FC685C8A19282938000272AF /* billeteca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = billeteca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC685C8D19282938000272AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FC685C8F19282938000272AF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -151,6 +154,15 @@
 			name = resultsTable;
 			sourceTree = "<group>";
 		};
+		FC2BB7621934203A00C5B77B /* loading */ = {
+			isa = PBXGroup;
+			children = (
+				FC2BB75F1934203600C5B77B /* billetecaLoadingViewController.h */,
+				FC2BB7601934203600C5B77B /* billetecaLoadingViewController.m */,
+			);
+			name = loading;
+			sourceTree = "<group>";
+		};
 		FC685C8119282938000272AF = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +207,7 @@
 		FC685C9319282938000272AF /* billeteca */ = {
 			isa = PBXGroup;
 			children = (
+				FC2BB7621934203A00C5B77B /* loading */,
 				FCD4F0CA1932A65500B03FCD /* detail */,
 				FC066D901928F13500FEC3E8 /* resultsTable */,
 				FC066D8F1928F11100FEC3E8 /* app */,
@@ -361,6 +374,7 @@
 			files = (
 				FCD4F0C91932A64C00B03FCD /* billetecaDetailViewController.m in Sources */,
 				FC685C9E19282938000272AF /* billetecaAppDelegate.m in Sources */,
+				FC2BB7611934203600C5B77B /* billetecaLoadingViewController.m in Sources */,
 				FC066D931928F16200FEC3E8 /* billetecaTableViewController.m in Sources */,
 				FC685CA719282938000272AF /* billetecaViewController.m in Sources */,
 				FC685C9A19282938000272AF /* main.m in Sources */,
