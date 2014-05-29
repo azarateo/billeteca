@@ -98,24 +98,29 @@
     if (!tView){
         tView = [[UILabel alloc] init];
         // Setup label properties - frame, font, colors etc
-        tView.font = [UIFont systemFontOfSize:14];
         
     }
     // Fill the label text here
     if (component == 0) {
         tView.text = [arrayDenomination objectAtIndex:row];
         tView.textAlignment = NSTextAlignmentCenter;
+        tView.font = [UIFont systemFontOfSize:18];
+
     }
     if (component == 1) {
         tView.text = [arrayYears objectAtIndex:row];
         tView.textAlignment = NSTextAlignmentRight;
         tView.textColor = [UIColor blueColor];
+        tView.font = [UIFont systemFontOfSize:16];
+
 
     }
     if (component == 2){
         tView.text = [arrayMonths objectAtIndex:row];
         tView.textAlignment = NSTextAlignmentRight;
-        tView.textColor = [UIColor redColor];
+        tView.textColor = [UIColor blueColor];
+        tView.font = [UIFont systemFontOfSize:15];
+
 
     }
     return tView;
