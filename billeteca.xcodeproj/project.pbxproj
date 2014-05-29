@@ -16,7 +16,6 @@
 		FC685C9A19282938000272AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC685C9919282938000272AF /* main.m */; };
 		FC685C9E19282938000272AF /* billetecaAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC685C9D19282938000272AF /* billetecaAppDelegate.m */; };
 		FC685CA119282938000272AF /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC685C9F19282938000272AF /* Main_iPhone.storyboard */; };
-		FC685CA419282938000272AF /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC685CA219282938000272AF /* Main_iPad.storyboard */; };
 		FC685CA719282938000272AF /* billetecaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC685CA619282938000272AF /* billetecaViewController.m */; };
 		FC685CA919282938000272AF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC685CA819282938000272AF /* Images.xcassets */; };
 		FC685CB019282938000272AF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC685CAF19282938000272AF /* XCTest.framework */; };
@@ -27,6 +26,15 @@
 		FC685CC619282B37000272AF /* billetekaback.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC685CC519282B37000272AF /* billetekaback.jpg */; };
 		FC685CC919283012000272AF /* billetekalog.png in Resources */ = {isa = PBXBuildFile; fileRef = FC685CC819283012000272AF /* billetekalog.png */; };
 		FCD4F0C91932A64C00B03FCD /* billetecaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD4F0C81932A64C00B03FCD /* billetecaDetailViewController.m */; };
+		FCE25CFA1936D03D0005D6D2 /* ad_1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FCE25CF91936D03D0005D6D2 /* ad_1.jpeg */; };
+		FCE25CFC1936D2A30005D6D2 /* logoapp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCE25CFB1936D2A30005D6D2 /* logoapp.jpg */; };
+		FCE25D041936D6060005D6D2 /* 120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE25CFD1936D6060005D6D2 /* 120x120.png */; };
+		FCE25D051936D6060005D6D2 /* 152x152.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE25CFE1936D6060005D6D2 /* 152x152.png */; };
+		FCE25D061936D6060005D6D2 /* 76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE25CFF1936D6060005D6D2 /* 76x76.png */; };
+		FCE25D071936D6060005D6D2 /* logoapp.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE25D001936D6060005D6D2 /* logoapp.png */; };
+		FCE25D081936D6060005D6D2 /* 40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE25D011936D6060005D6D2 /* 40x40.png */; };
+		FCE25D091936D6060005D6D2 /* 58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE25D021936D6060005D6D2 /* 58x58.png */; };
+		FCE25D0A1936D6060005D6D2 /* 29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE25D031936D6060005D6D2 /* 29x29.png */; };
 		FCFF277F1930F79E0023897C /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFF277E1930F79E0023897C /* Parse.framework */; };
 		FCFF27811930F7CE0023897C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFF27801930F7CE0023897C /* SystemConfiguration.framework */; };
 		FCFF27831930F7D70023897C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFF27821930F7D70023897C /* StoreKit.framework */; };
@@ -66,7 +74,6 @@
 		FC685C9C19282938000272AF /* billetecaAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = billetecaAppDelegate.h; sourceTree = "<group>"; };
 		FC685C9D19282938000272AF /* billetecaAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = billetecaAppDelegate.m; sourceTree = "<group>"; };
 		FC685CA019282938000272AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		FC685CA319282938000272AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		FC685CA519282938000272AF /* billetecaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = billetecaViewController.h; sourceTree = "<group>"; };
 		FC685CA619282938000272AF /* billetecaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = billetecaViewController.m; sourceTree = "<group>"; };
 		FC685CA819282938000272AF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -79,6 +86,15 @@
 		FC685CC819283012000272AF /* billetekalog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = billetekalog.png; sourceTree = "<group>"; };
 		FCD4F0C71932A64C00B03FCD /* billetecaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = billetecaDetailViewController.h; sourceTree = "<group>"; };
 		FCD4F0C81932A64C00B03FCD /* billetecaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = billetecaDetailViewController.m; sourceTree = "<group>"; };
+		FCE25CF91936D03D0005D6D2 /* ad_1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ad_1.jpeg; sourceTree = "<group>"; };
+		FCE25CFB1936D2A30005D6D2 /* logoapp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logoapp.jpg; sourceTree = "<group>"; };
+		FCE25CFD1936D6060005D6D2 /* 120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 120x120.png; sourceTree = "<group>"; };
+		FCE25CFE1936D6060005D6D2 /* 152x152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 152x152.png; sourceTree = "<group>"; };
+		FCE25CFF1936D6060005D6D2 /* 76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 76x76.png; sourceTree = "<group>"; };
+		FCE25D001936D6060005D6D2 /* logoapp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoapp.png; sourceTree = "<group>"; };
+		FCE25D011936D6060005D6D2 /* 40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 40x40.png; sourceTree = "<group>"; };
+		FCE25D021936D6060005D6D2 /* 58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 58x58.png; sourceTree = "<group>"; };
+		FCE25D031936D6060005D6D2 /* 29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 29x29.png; sourceTree = "<group>"; };
 		FCFF277E1930F79E0023897C /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../../Downloads/Parse.framework; sourceTree = "<group>"; };
 		FCFF27801930F7CE0023897C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FCFF27821930F7D70023897C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -214,7 +230,6 @@
 				FC066D8E1928F10300FEC3E8 /* home */,
 				FC685CC719282B4F000272AF /* images */,
 				FC685C9F19282938000272AF /* Main_iPhone.storyboard */,
-				FC685CA219282938000272AF /* Main_iPad.storyboard */,
 				FC685CA819282938000272AF /* Images.xcassets */,
 				FC685C9419282938000272AF /* Supporting Files */,
 			);
@@ -253,6 +268,15 @@
 		FC685CC719282B4F000272AF /* images */ = {
 			isa = PBXGroup;
 			children = (
+				FCE25CF91936D03D0005D6D2 /* ad_1.jpeg */,
+				FCE25CFD1936D6060005D6D2 /* 120x120.png */,
+				FCE25CFE1936D6060005D6D2 /* 152x152.png */,
+				FCE25CFF1936D6060005D6D2 /* 76x76.png */,
+				FCE25D001936D6060005D6D2 /* logoapp.png */,
+				FCE25D011936D6060005D6D2 /* 40x40.png */,
+				FCE25D021936D6060005D6D2 /* 58x58.png */,
+				FCE25D031936D6060005D6D2 /* 29x29.png */,
+				FCE25CFB1936D2A30005D6D2 /* logoapp.jpg */,
 				FC685CC819283012000272AF /* billetekalog.png */,
 				FC685CC519282B37000272AF /* billetekaback.jpg */,
 			);
@@ -348,12 +372,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC685CA419282938000272AF /* Main_iPad.storyboard in Resources */,
+				FCE25D071936D6060005D6D2 /* logoapp.png in Resources */,
+				FCE25D081936D6060005D6D2 /* 40x40.png in Resources */,
+				FCE25D041936D6060005D6D2 /* 120x120.png in Resources */,
+				FCE25D0A1936D6060005D6D2 /* 29x29.png in Resources */,
+				FCE25D091936D6060005D6D2 /* 58x58.png in Resources */,
 				FC685CA919282938000272AF /* Images.xcassets in Resources */,
 				FC685CC919283012000272AF /* billetekalog.png in Resources */,
+				FCE25D051936D6060005D6D2 /* 152x152.png in Resources */,
 				FC685CA119282938000272AF /* Main_iPhone.storyboard in Resources */,
+				FCE25CFC1936D2A30005D6D2 /* logoapp.jpg in Resources */,
+				FCE25D061936D6060005D6D2 /* 76x76.png in Resources */,
 				FC685CC619282B37000272AF /* billetekaback.jpg in Resources */,
 				FC685C9819282938000272AF /* InfoPlist.strings in Resources */,
+				FCE25CFA1936D03D0005D6D2 /* ad_1.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,14 +446,6 @@
 				FC685CA019282938000272AF /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		FC685CA219282938000272AF /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FC685CA319282938000272AF /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		FC685CB819282938000272AF /* InfoPlist.strings */ = {
@@ -523,8 +547,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "billeteca/billeteca-Prefix.pch";
 				INFOPLIST_FILE = "billeteca/billeteca-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -543,8 +569,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "billeteca/billeteca-Prefix.pch";
 				INFOPLIST_FILE = "billeteca/billeteca-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

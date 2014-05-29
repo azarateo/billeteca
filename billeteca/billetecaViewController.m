@@ -26,6 +26,7 @@
 
 - (void)viewDidLoad
 {
+    self.navigationItem.hidesBackButton = YES;
     ruta = [[NSString alloc] init];
     NSArray *arregloUbicaciones = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
     ruta = [[arregloUbicaciones objectAtIndex:0] stringByAppendingPathComponent:@"bp.sql"];

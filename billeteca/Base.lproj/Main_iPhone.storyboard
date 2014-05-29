@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Billeteca Loading View Controller-->
+        <!--Billeteca Loading View Controller - BILLETEKA-->
         <scene sceneID="RAv-p8-ewn">
             <objects>
                 <viewController id="Lg6-qv-pW9" customClass="billetecaLoadingViewController" sceneMemberID="viewController">
@@ -83,7 +83,7 @@
                             <constraint firstItem="BzE-U0-4gP" firstAttribute="top" secondItem="gle-b2-Myk" secondAttribute="top" id="zbN-MZ-cqO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="fc2-pw-1PR"/>
+                    <navigationItem key="navigationItem" title="BILLETEKA" id="fc2-pw-1PR"/>
                     <connections>
                         <outlet property="continueButton" destination="pbG-A7-nGU" id="8bJ-G9-5hl"/>
                         <outlet property="mensaje" destination="i5I-4s-zDc" id="CQV-ZV-ueB"/>
@@ -93,7 +93,222 @@
             </objects>
             <point key="canvasLocation" x="311" y="68"/>
         </scene>
-        <!--Billeteca View Controller - BILLETECA-->
+        <!--View Controller - Acerca de nosotros-->
+        <scene sceneID="pSN-O7-VIV">
+            <objects>
+                <viewController id="Gkv-Ob-fvt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P9r-gG-xYk"/>
+                        <viewControllerLayoutGuide type="bottom" id="QYk-ie-squ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yof-5o-pbA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="billetekaback.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wSo-8W-LmP">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="billetekalog.png" translatesAutoresizingMaskIntoConstraints="NO" id="hhM-nS-2eC">
+                                <rect key="frame" x="85" y="69" width="151" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="uFP-ju-Q3N"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zm4-Ox-bfS">
+                                <rect key="frame" x="53" y="177" width="214" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="KNG-Za-hoU"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="BILLETEKA">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="24" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbq-vh-soJ">
+                                <rect key="frame" x="110" y="205" width="100" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="AdB-Cx-rru"/>
+                                    <constraint firstAttribute="width" constant="100" id="WHN-lO-zFl"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Version 1.0.0">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryp-kg-7sV">
+                                <rect key="frame" x="37" y="292" width="247" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Desarrollado por COOL">
+                                        <attributes>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="4CODE">
+                                        <attributes>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqO-Oj-IGw">
+                                <rect key="frame" x="37" y="234" width="247" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="g4w-JY-Z5e"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Concepto: Rodrigo Gómez">
+                                        <attributes>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhz-d3-bBC">
+                                <rect key="frame" x="79" y="353" width="162" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ilJ-SM-aXB"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="www.cool4code.com">
+                                        <attributes>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="187" translatesAutoresizingMaskIntoConstraints="NO" id="aIv-nI-VuW">
+                                <rect key="frame" x="67" y="308" width="187" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="uB5-st-OtP"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Paola Vanegas, Marcos Aguilera, David Alméciga y Alejandro Zárate">
+                                        <attributes>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKu-3m-uYD">
+                                <rect key="frame" x="79" y="263" width="162" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="0je-YR-aRT"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="www.cool4code.com">
+                                        <attributes>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diseñado por Manuel Becerra" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EeV-Bl-VXg">
+                                <rect key="frame" x="46" y="382" width="229" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHV-oa-Vq2">
+                                <rect key="frame" x="104" y="411" width="112" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="SRC-We-Tqa"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Paris - Francia">
+                                        <attributes>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Uhz-d3-bBC" firstAttribute="trailing" secondItem="eKu-3m-uYD" secondAttribute="trailing" id="0aM-DZ-3ey"/>
+                            <constraint firstAttribute="trailing" secondItem="wSo-8W-LmP" secondAttribute="trailing" id="20U-wj-Ypt"/>
+                            <constraint firstItem="aIv-nI-VuW" firstAttribute="centerX" secondItem="Ryp-kg-7sV" secondAttribute="centerX" id="2q6-vS-sq2"/>
+                            <constraint firstItem="Uhz-d3-bBC" firstAttribute="centerX" secondItem="tbq-vh-soJ" secondAttribute="centerX" id="5eI-ON-Zdx"/>
+                            <constraint firstItem="oHV-oa-Vq2" firstAttribute="top" secondItem="EeV-Bl-VXg" secondAttribute="bottom" constant="8" symbolic="YES" id="8ff-Ke-b0o"/>
+                            <constraint firstItem="Uhz-d3-bBC" firstAttribute="leading" secondItem="eKu-3m-uYD" secondAttribute="leading" id="9OX-LX-4Mr"/>
+                            <constraint firstItem="EeV-Bl-VXg" firstAttribute="centerX" secondItem="zm4-Ox-bfS" secondAttribute="centerX" id="ANE-WX-iEe"/>
+                            <constraint firstItem="zm4-Ox-bfS" firstAttribute="centerX" secondItem="hhM-nS-2eC" secondAttribute="centerX" id="BFE-If-deK"/>
+                            <constraint firstItem="Ryp-kg-7sV" firstAttribute="top" secondItem="eKu-3m-uYD" secondAttribute="bottom" constant="8" symbolic="YES" id="GQd-hb-p9u"/>
+                            <constraint firstItem="Ryp-kg-7sV" firstAttribute="centerX" secondItem="eKu-3m-uYD" secondAttribute="centerX" id="JHL-SO-79t"/>
+                            <constraint firstItem="QYk-ie-squ" firstAttribute="top" secondItem="oHV-oa-Vq2" secondAttribute="bottom" constant="4" id="JJS-GX-aJP"/>
+                            <constraint firstItem="tbq-vh-soJ" firstAttribute="top" secondItem="zm4-Ox-bfS" secondAttribute="bottom" constant="8" symbolic="YES" id="LWg-fW-akS"/>
+                            <constraint firstAttribute="bottom" secondItem="EeV-Bl-VXg" secondAttribute="bottom" constant="77" id="MgZ-b5-btG"/>
+                            <constraint firstItem="wSo-8W-LmP" firstAttribute="centerX" secondItem="yof-5o-pbA" secondAttribute="centerX" id="PRe-5o-TNM"/>
+                            <constraint firstItem="hhM-nS-2eC" firstAttribute="centerX" secondItem="yof-5o-pbA" secondAttribute="centerX" id="Qnc-1t-D2R"/>
+                            <constraint firstItem="Ryp-kg-7sV" firstAttribute="leading" secondItem="lqO-Oj-IGw" secondAttribute="leading" id="Tun-5R-Mdc"/>
+                            <constraint firstItem="wSo-8W-LmP" firstAttribute="top" secondItem="yof-5o-pbA" secondAttribute="top" id="Z8C-w8-Rzu"/>
+                            <constraint firstItem="EeV-Bl-VXg" firstAttribute="centerX" secondItem="aIv-nI-VuW" secondAttribute="centerX" id="a1r-ko-OKo"/>
+                            <constraint firstItem="hhM-nS-2eC" firstAttribute="top" secondItem="P9r-gG-xYk" secondAttribute="bottom" constant="5" id="aa1-ug-WeM"/>
+                            <constraint firstItem="zm4-Ox-bfS" firstAttribute="leading" secondItem="yof-5o-pbA" secondAttribute="leading" constant="53" id="cC1-W1-1t9"/>
+                            <constraint firstItem="hhM-nS-2eC" firstAttribute="leading" secondItem="yof-5o-pbA" secondAttribute="leading" constant="85" id="dag-uz-koP"/>
+                            <constraint firstItem="zm4-Ox-bfS" firstAttribute="top" secondItem="hhM-nS-2eC" secondAttribute="bottom" constant="8" symbolic="YES" id="emc-e3-zFe"/>
+                            <constraint firstItem="lqO-Oj-IGw" firstAttribute="top" secondItem="tbq-vh-soJ" secondAttribute="bottom" constant="8" symbolic="YES" id="jDD-SD-dHf"/>
+                            <constraint firstItem="eKu-3m-uYD" firstAttribute="leading" secondItem="yof-5o-pbA" secondAttribute="leading" constant="79" id="pO1-y8-Rtg"/>
+                            <constraint firstItem="aIv-nI-VuW" firstAttribute="top" secondItem="eKu-3m-uYD" secondAttribute="bottom" constant="24" id="pvc-Yp-8KB"/>
+                            <constraint firstAttribute="bottom" secondItem="wSo-8W-LmP" secondAttribute="bottom" id="tbN-tJ-fec"/>
+                            <constraint firstItem="Ryp-kg-7sV" firstAttribute="trailing" secondItem="lqO-Oj-IGw" secondAttribute="trailing" id="uks-b0-6eS"/>
+                            <constraint firstItem="aIv-nI-VuW" firstAttribute="leading" secondItem="yof-5o-pbA" secondAttribute="leading" constant="67" id="wsc-sh-yKg"/>
+                            <constraint firstItem="eKu-3m-uYD" firstAttribute="top" secondItem="lqO-Oj-IGw" secondAttribute="bottom" constant="8" symbolic="YES" id="x8v-Um-i6r"/>
+                            <constraint firstItem="lqO-Oj-IGw" firstAttribute="leading" secondItem="yof-5o-pbA" secondAttribute="leading" constant="37" id="xXB-b4-nsz"/>
+                            <constraint firstItem="wSo-8W-LmP" firstAttribute="leading" secondItem="yof-5o-pbA" secondAttribute="leading" id="yac-bo-fW6"/>
+                            <constraint firstItem="oHV-oa-Vq2" firstAttribute="centerX" secondItem="EeV-Bl-VXg" secondAttribute="centerX" id="yyt-8c-n6U"/>
+                            <constraint firstItem="EeV-Bl-VXg" firstAttribute="top" secondItem="Uhz-d3-bBC" secondAttribute="bottom" constant="8" symbolic="YES" id="zUL-Av-FiJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Acerca de nosotros" id="h2P-uP-yhp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fWF-hG-Wqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10" y="-537"/>
+        </scene>
+        <!--Billeteca View Controller - BILLETEKA-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="billetecaViewController" sceneMemberID="viewController">
@@ -124,6 +339,7 @@
                                     <constraint firstAttribute="height" constant="20" id="gYm-iv-lJJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1923 - Hoy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcm-3H-60L">
@@ -230,7 +446,21 @@
                             <constraint firstItem="rI7-eP-fYK" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="-8" id="zQC-eA-Gd2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="BILLETECA" id="MFH-md-5Bb"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="BILLETEKA" id="MFH-md-5Bb">
+                        <barButtonItem key="leftBarButtonItem" systemItem="compose" id="koH-bo-y35">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="Gkv-Ob-fvt" kind="push" id="nBQ-CU-vvR"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="eWg-Ku-POd">
+                            <connections>
+                                <segue destination="KFC-d5-f4Q" kind="push" id="BLf-ef-uY8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="denominacion" destination="ToT-Fc-2Ot" id="B3E-BH-e9o"/>
                     </connections>
@@ -302,6 +532,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ddn-Wz-2h9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1064" y="68"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0lH-Y2-wbe">
+            <objects>
+                <viewController id="KFC-d5-f4Q" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oWy-1O-D1m"/>
+                        <viewControllerLayoutGuide type="bottom" id="DAM-kt-f8b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o6A-0Z-OvL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ad_1.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="Ouf-HH-rvH">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078437569999997" green="0.82745105029999999" blue="0.30196079609999998" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ouf-HH-rvH" firstAttribute="leading" secondItem="o6A-0Z-OvL" secondAttribute="leading" id="9nl-eK-aiy"/>
+                            <constraint firstAttribute="bottom" secondItem="Ouf-HH-rvH" secondAttribute="bottom" id="K9V-eE-0Bq"/>
+                            <constraint firstItem="Ouf-HH-rvH" firstAttribute="top" secondItem="o6A-0Z-OvL" secondAttribute="top" constant="64" id="ep7-31-36b"/>
+                            <constraint firstAttribute="trailing" secondItem="Ouf-HH-rvH" secondAttribute="trailing" id="hdI-76-fT1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" prompt="Catálogo impreso" id="wsY-rS-8JC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kAq-B8-XNw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="429" y="-537"/>
         </scene>
         <!--Billeteca Detail View Controller - Detalle-->
         <scene sceneID="BJD-C4-NX1">
@@ -504,7 +765,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ov6-cu-PGv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1438" y="91"/>
+            <point key="canvasLocation" x="1472" y="68"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3Ka-Mw-5IT">
@@ -527,6 +788,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ad_1.jpeg" width="719" height="910"/>
         <image name="billetekaback.jpg" width="1080" height="1920"/>
         <image name="billetekalog.png" width="806" height="522"/>
     </resources>
