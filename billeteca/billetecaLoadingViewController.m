@@ -16,7 +16,8 @@
 @end
 
 @implementation billetecaLoadingViewController
-
+@synthesize mensaje;
+@synthesize continueButton;
 
 
 - (void)viewDidLoad
@@ -29,21 +30,20 @@
     [currentInstallation saveInBackground];
     
 #pragma mark database creation Opening
-    
+
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    
-    
     [self creaRuta];
     
     BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:ruta];
 
     if(fileExists){
         NSLog(@"Ya existe la base de datos");
+        [mensaje setHidden:YES];
     }else{
         NSLog(@"Creando la base de datos");
+        [continueButton setHidden:YES];
     [self creaTabla];
     [self insertaDatos];
     }
@@ -61,7 +61,7 @@
 
 -(void)creaTabla{
 
- 
+    
     
     if(sqlite3_open([ruta UTF8String], &db)){
         sqlite3_close(db);
@@ -91,6 +91,8 @@
 
 -(void)insertaDatos{
     
+    
+    
     if(sqlite3_open([ruta UTF8String], &db) != SQLITE_OK){
         sqlite3_close(db);
         NSLog(@"No se pudo abrir la base de datos");
@@ -104,11 +106,13 @@
     [query whereKey:@"denominacion" notEqualTo:@""];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
+           
             // The find succeeded.
             NSLog(@"Billetes encontrados %lu", (unsigned long)objects.count);
             // Do something with the found objects
             int i = 0;
             for (PFObject *object in objects) {
+                
                 NSLog(@"%d",i);
                 //NSLog(@"Objeto resultado %@",object);
                 NSString *objectId = [object objectId] == nil ? @"" : [NSString stringWithString:[object objectId]];
@@ -134,12 +138,17 @@
                     
                 }
                 i++;
+                
             }
-            
+           
         } else {
             // Log details of the failure
             NSLog(@"Billeteca: Error in query to cloud databases: %@ %@", error, [error userInfo]);
         }
+        [continueButton setHidden:NO];
+        [mensaje setHidden:YES];
+
+
     }];
     
     

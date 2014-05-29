@@ -14,5 +14,7 @@
     NSString *ruta;
     
 }
+@property (weak, nonatomic) IBOutlet UILabel *mensaje;
+@property (weak, nonatomic) IBOutlet UIButton *continueButton;
 
 @end

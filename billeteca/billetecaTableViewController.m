@@ -124,7 +124,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"banknoteFound" forIndexPath:indexPath];
-    cell.textLabel.text = [[denominations objectAtIndex:indexPath.row] stringByAppendingString:@" pesos"];
+    cell.textLabel.text = [[denominations objectAtIndex:indexPath.row] stringByAppendingString:@" peso(s)"];
     NSString *yearSpace = [[years objectAtIndex:indexPath.row] stringByAppendingString:@" "];
     NSString *issueDate = [yearSpace stringByAppendingString:[months objectAtIndex:indexPath.row]];
     NSString *issueDate2 = [issueDate stringByAppendingString:@" - "];
